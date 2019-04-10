@@ -4,7 +4,7 @@ author: "Zachary M. Smith"
 date: "4/9/2019"
 output: bookdown::gitbook
 site: bookdown::bookdown_site
-output_dir: "/docs"
+output_dir: "docs"
 ---
 
 # Preface
