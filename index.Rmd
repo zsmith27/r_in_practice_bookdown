@@ -2,8 +2,9 @@
 title: "R in Practice"
 author: "Zachary M. Smith"
 date: "4/9/2019"
-output: html_document
-output_dir: "docs"
+output: bookdown::gitbook
+site: bookdown::bookdown_site
+output_dir: "/docs"
 ---
 
 # Preface
