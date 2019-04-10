@@ -1,0 +1,12 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,21,"",dreissena_bugensis,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_bugensis,4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,29,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,1,"",valvata,gen,mollusca,"",gastropoda,"",heterostropha,"",valvatidae,"","",valvata,"",4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,6,"",chironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,chironomus,"",4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,4,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,34,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,1,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,2,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,1,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,33,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",4,30
+onon_3_1,onon,onon_3,1,43.105499,-76.220901,esf,kick net,6/22/2014,1,"",hyalella,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,hyalellidae,"","",hyalella,"",4,30

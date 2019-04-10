@@ -1,0 +1,35 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "September 22, 2018"
+output: html_document
+---
+
+# Quick Reference
+
+1. Cheat Sheets: https://www.rstudio.com/resources/cheatsheets/
+2. R Bloggers: https://www.r-bloggers.com/
+3. Questions
+    + StackOverflow: https://stackoverflow.com
+    + R Community: https://community.rstudio.com/
+4. Style Guides
+    + Hadely Wickham: http://style.tidyverse.org/index.html
+    + Google: https://google.github.io/styleguide/Rguide.xml
+5. Books and Papers
+    + R for Data Science: http://r4ds.had.co.nz/
+    + The Art of R Programming: http://heather.cs.ucdavis.edu/~matloff/132/NSPpart.pdf
+    + Advanced R: http://adv-r.had.co.nz/
+    + R Packages: http://r-pkgs.had.co.nz/
+    + Tidy Data: https://www.jstatsoft.org/article/view/v059i10
+6. Packages
+    + Shiny (Interactive Apps): https://shiny.rstudio.com/
+        + Tutorials: https://shiny.rstudio.com/tutorial/
+    + Leaflet (Interactive Maps): https://rstudio.github.io/leaflet/
+    + DT (Interactive Tables): https://rstudio.github.io/DT/
+    + Dygraphs (Interactive Time Series Plots): https://rstudio.github.io/dygraphs/
+    + Plotly (Interactive Plots): https://plot.ly/r/
+    + Tidyverse Packages (Ecosystem of Packages): https://www.tidyverse.org/
+    + Rmarkdown (Documentation): https://rmarkdown.rstudio.com/lesson-1.html
+    + USGS GitHub: https://github.com/USGS-R
+        + dataRetrieval (Acquire data from the Water Quality Portal): https://cran.r-project.org/web/packages/dataRetrieval/vignettes/dataRetrieval.html
+        + EGRET (Analysis of long-term changes in water quality and streamflow): https://cran.r-project.org/web/packages/EGRET/vignettes/EGRET.pdf

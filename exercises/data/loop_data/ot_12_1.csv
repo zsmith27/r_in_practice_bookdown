@@ -1,0 +1,13 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,19,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,5,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,11,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,4,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,4,"",thienemanniella,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",thienemanniella,"",2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,8,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,4,"",stenonema_femoratum,spe,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,pisciforma,heptageniidae,"","",stenonema,stenonema_femoratum,2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,3,"",stenacron,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,pisciforma,heptageniidae,"","",stenacron,"",2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,6,early instar,stenonema,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,pisciforma,heptageniidae,"","",stenonema,"",2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,1,"",choroterpes,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,furcatergalia,leptophlebiidae,"","",choroterpes,"",2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,2,"",leptophlebiidae,fam,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,furcatergalia,leptophlebiidae,"","","","",2,30
+ot_12_1,ot,ot_12,1,42.8524895,-76.2792816,esf,kick net,7/2/2014,42,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",2,30

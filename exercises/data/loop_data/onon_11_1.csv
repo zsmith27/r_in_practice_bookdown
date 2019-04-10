@@ -1,0 +1,5 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_11_1,onon,onon_11,1,43.0732,-76.204696,esf,kick net,6/27/2014,25,"",dreissena_bugensis,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_bugensis,3,30
+onon_11_1,onon,onon_11,1,43.0732,-76.204696,esf,kick net,6/27/2014,21,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,3,30
+onon_11_1,onon,onon_11,1,43.0732,-76.204696,esf,kick net,6/27/2014,19,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",3,30
+onon_11_1,onon,onon_11,1,43.0732,-76.204696,esf,kick net,6/27/2014,36,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",3,30

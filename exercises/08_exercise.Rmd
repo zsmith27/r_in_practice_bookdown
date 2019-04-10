@@ -1,0 +1,46 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 24, 2019"
+output: html_document
+---
+
+
+# tidyr Exercises
+
+Load __tidyr__ and __dplyr__.
+```{r}
+library(tidyr)
+suppressPackageStartupMessages(
+  library(dplyr)
+)
+```
+
+## Example Data
+
+Import the example data. This data represents benthic macroinvertebrate data collected in the littoral zone of Onondaga, Otisco, and Cazenovia lakes 
+```{r}
+onon1.df <- file.path("data",
+                     "zms_thesis-macro_2017-06-18.csv") %>% 
+  read.csv(stringsAsFactors = FALSE) %>% 
+  filter(station_id == "onon_1") %>% 
+  select(unique_id, final_id, count)
+
+DT::datatable(onon1.df, options = list(scrollX = TRUE))
+```
+
+1. Make `onon1.df` represent `final_id` as the column headers and `count` represent the values in the rows.
+    + Store the object as "wide.df"
+    + make sure you fill blanks with zeros
+
+2. Convert `wide.df` bake to a long data format where the taxonomic column headers now represent a column titled "final_id" and the the values from the taxonomic columns are represented in a column titled "count".
+
+3. Why is `long.df` not equivalent to `onon1.df`?
+```{r}
+identical(long.df, onon1.df)
+```
+
+4. Can you make data frame equivalent to `long.df` without the use of `spread()` and `gather()`?
+    + Store the object as "new.df"
+    + Make sure they are equivalent with the use of `identical()`
+        + You will need to use `select(unique_id, final_id, count) %>% data.frame()` before calling `identical()`

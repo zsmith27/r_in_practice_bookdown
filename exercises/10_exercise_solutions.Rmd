@@ -1,0 +1,133 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 24, 2019"
+output: html_document
+---
+
+
+# ggplot2 Exercise Solutions
+
+```{r}
+library(ggplot2)
+
+suppressPackageStartupMessages(
+ library(dplyr) 
+)
+
+library(tidyr)
+```
+
+## Example Data
+
+Import the example data. This data represents benthic macroinvertebrate data collected in the littoral zone of Onondaga, Otisco, and Cazenovia lakes.
+```{r}
+taxa.df <- file.path("data",
+          "zms_thesis-macro_2017-06-18.csv") %>% 
+  read.csv(stringsAsFactors = FALSE)
+```
+
+Preprocess `taxa.df` to just represent order-level taxonomic counts per sample. For more details about this process see the [summarize] section.
+```{r}
+ord.df <- taxa.df %>% 
+  select(unique_id, station_id, lake, order, count) %>% 
+  group_by(unique_id, station_id, lake, order) %>% 
+  summarize(count = sum(count)) %>% 
+  ungroup() %>% 
+  group_by(station_id, lake, order) %>% 
+  summarize(count = mean(count)) %>% 
+  ungroup()
+```
+ 
+Calculate the percentage of each sample represented by a given order-level taxon and use `complete()` to fill in missing combinations.
+```{r}
+pct.df <- ord.df %>% 
+  group_by(station_id) %>% 
+  mutate(total = sum(count),
+         percent = count / total * 100) %>% 
+  ungroup() %>% 
+  tidyr::complete(order,
+                  nesting(station_id, lake, total),
+                  fill = list(count = 0, percent = 0)) %>% 
+  mutate(lake = factor(lake, levels = c("onon", "ot", "caz")))
+```
+
+Import environmental data associated with the taxonomic counts.
+```{r}
+env.df <- file.path("data",
+                     "zms_thesis-env_2017-06-18.csv") %>% 
+  read.csv(stringsAsFactors = FALSE) %>% 
+  mutate(station_id = stringr::str_sub(unique_id, 1, -3)) %>% 
+  select(-unique_id) %>% 
+  distinct()
+```
+
+Join the `env.df` with `pct.df`.
+```{r}
+pct.df <- pct.df %>% 
+  left_join(env.df, by = "station_id")
+```
+
+## Exercises 
+
+1. The column `substrate` represents the dominant substrate type present at a sampling location. Make sure that in future plots `substrate` type will be plotted from smallest to largest size ("sand", "gravel", "coarsegravel", "cobble").
+```{r}
+pct.df <- pct.df %>% 
+  mutate(substrate = factor(substrate, levels = c("sand", "gravel", "coarsegravel", "cobble")))
+```
+
+2. Create box and whisker plots of percent Diptera by substrate type.
+    + How  can you just represent "diptera" from the `pct.df` data frame?
+    + Which __ggplot2__ functions are necessary to create a box and whisker plot?
+```{r}
+pct.df %>% 
+  filter(order == "diptera") %>% 
+ggplot(aes(substrate, percent)) +
+  geom_boxplot()
+```
+
+3. Create box and whisker plots of percent Amphipoda by substrate type.
+    + How does this plot compare to the Diptera plot?
+```{r}
+pct.df %>% 
+  filter(order == "amphipoda") %>% 
+ggplot(aes(substrate, percent)) +
+  geom_boxplot()
+```
+
+
+4. Can you create a single box and whisker plot showing "diptera" vs. "amphipoda" percentages per substrate category?
+    + In examples from the [ggplot2] section, we saw that setting a `fill` or `color` parameter can group the data.
+    + Is that pattern as clear as you thought is was above?
+```{r}
+pct.df %>% 
+  filter(order %in% c("diptera", "amphipoda")) %>% 
+ggplot(aes(substrate, percent, fill = order)) +
+  geom_boxplot()
+```
+
+5. Can you create a scatter plot showing the percent of Diptera and Amphipoda against `substrate_size_d50`?
+```{r}
+pct.df %>% 
+  filter(order %in% c("diptera", "amphipoda")) %>% 
+ggplot(aes(substrate_size_d50, percent, color = order)) +
+  geom_point()
+```
+
+6. Can you add a linear model to the scatter plot above?
+```{r}
+pct.df %>% 
+  filter(order %in% c("diptera", "amphipoda")) %>% 
+ggplot(aes(substrate_size_d50, percent, color = order)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = "y ~ x")
+```
+
+7. Can you add a LOESS model to the scatter plot above?
+```{r}
+pct.df %>% 
+  filter(order %in% c("diptera", "amphipoda")) %>% 
+ggplot(aes(substrate_size_d50, percent, color = order, fill = order)) +
+  geom_point() +
+  geom_smooth(method = "loess", formula = "y ~ x")
+```

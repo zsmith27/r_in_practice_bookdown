@@ -1,0 +1,21 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,2,"",pisidium,gen,mollusca,"",bivalvia,heterodonta,veneroida,"",pisidiidae,"","",pisidium,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,2,"",physa,gen,mollusca,"",gastropoda,"",basommatophora,"",physidae,"","",physa,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,1,"",gyraulus_parvus,spe,mollusca,"",gastropoda,"",basommatophora,"",planorbidae,"","",gyraulus,gyraulus_parvus,5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,2,"",valvata,gen,mollusca,"",gastropoda,"",heterostropha,"",valvatidae,"","",valvata,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,2,"",bezzia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,ceratopogonidae,ceratopogoninae,palpomyiini,bezzia,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,1,"",mallochohelea,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,ceratopogonidae,ceratopogoninae,sphaeromiini,mallochohelea,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,1,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,65,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,3,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,13,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,5,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,2,"",chironomidae,fam,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,"","","","",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,2,"",callibaetis,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,pisciforma,baetidae,"","",callibaetis,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,1,"",caenis,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,furcatergalia,caenidae,caeninae,"",caenis,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,2,"",agraylea,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,spicipalpia,hydroptilidae,hydroptilinae,hydroptilini,agraylea,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,4,"",hydroptila,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,spicipalpia,hydroptilidae,hydroptilinae,hydroptilini,hydroptila,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,6,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,4,"",hyalella,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,hyalellidae,"","",hyalella,"",5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,1,"",orconectes_obscurus,spe,arthropoda,crustacea,malacostraca,eumalacostraca,decapoda,pleocyemata,cambaridae,cambarinae,"",orconectes,orconectes_obscurus,5,45
+caz_15_2,caz,caz_15,2,42.9628563,-75.8793335,esf,kick net,7/1/2014,4,"",caecidotea,gen,arthropoda,crustacea,malacostraca,eumalacostraca,isopoda,asellota,asellidae,"","",caecidotea,"",5,45

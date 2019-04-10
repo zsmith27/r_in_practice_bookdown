@@ -1,0 +1,16 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,2,"",dreissena_bugensis,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_bugensis,3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,20,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,3,"",amnicola,gen,mollusca,"",gastropoda,"",neotaenioglossa,"",hydrobiidae,"","",amnicola,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,1,"",physa,gen,mollusca,"",gastropoda,"",basommatophora,"",physidae,"","",physa,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,1,"",menetus_dilatatus,spe,mollusca,"",gastropoda,"",basommatophora,"",planorbidae,"","",menetus,menetus_dilatatus,3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,8,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,5,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,3,"",polypedilum,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,polypedilum,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,8,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,3,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,2,"",procladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,procladiini,procladius,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,8,"",hydroptila,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,spicipalpia,hydroptilidae,hydroptilinae,hydroptilini,hydroptila,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,1,"",crangonyx,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,crangonyctidae,"","",crangonyx,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,123,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",3,30
+onon_6_1,onon,onon_6,1,43.091499,-76.195396,esf,kick net,6/23/2014,7,"",hyalella,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,hyalellidae,"","",hyalella,"",3,30

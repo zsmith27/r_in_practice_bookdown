@@ -1,0 +1,12 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 22, 2019"
+output: html_document
+---
+
+# R Project Exercises
+
+1. Create an R project
+2. Drag the files from the flash drive into your R project
+3. Run the parent.Rmd within the markdown folder

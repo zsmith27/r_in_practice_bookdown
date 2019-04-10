@@ -1,0 +1,14 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,7,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,1,"",physa,gen,mollusca,"",gastropoda,"",basommatophora,"",physidae,"","",physa,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,2,"",helisoma_anceps,spe,mollusca,"",gastropoda,"",basommatophora,"",planorbidae,"","",helisoma,helisoma_anceps,3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,4,"",cryptochironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,cryptochironomus,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,4,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,1,"",polypedilum,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,polypedilum,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,1,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,3,"",corynoneura,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",corynoneura,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,1,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,1,"",thienemanniella,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",thienemanniella,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,4,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,1,"",crangonyx,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,crangonyctidae,"","",crangonyx,"",3,15
+ot_16_1,ot,ot_16,1,42.8826752,-76.3109665,esf,kick net,7/2/2014,72,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",3,15

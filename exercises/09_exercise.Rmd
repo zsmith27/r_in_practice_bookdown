@@ -1,0 +1,47 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 24, 2019"
+output: html_document
+---
+
+
+# lubridate Exercises
+
+```{r}
+library(lubridate)
+suppressPackageStartupMessages(
+  library(dplyr)
+)
+```
+
+Import the example data. This data represents benthic macroinvertebrate data collected in the littoral zone of Onondaga, Otisco, and Cazenovia lakes. Only include unique instances of station IDs and sample dates. For more details about this process see the [select] and [distinct] sections.
+```{r}
+dates.df <- file.path("data",
+          "zms_thesis-macro_2017-06-18.csv") %>% 
+  read.csv(stringsAsFactors = FALSE) %>% 
+  select(station_id, date) %>% 
+  distinct() %>% 
+  mutate(date = mdy(date),
+         date = format(date, "%Y-%m-%d"))
+
+DT::datatable(dates.df, options = list(columnDefs = list(list(className = 'dt-center', targets = 0:2))))
+```
+
+1. Converte the `date` column in `dates.df` to a Date class. Keep the column name as `date`.
+
+2. Exctract...
+    + year from dates and add it as a column titled "year"
+    + month from dates and add it as a column titled "month"
+    + day from dates and add it as a column titled "day"
+
+3. Use the `unite()` function to combine the columns `day, month, year` into a column called "date2". 
+    + Store this object as "dates2.df".
+    + Please unite in the order of `day, month, year`. 
+    + After creating `date2`, convert `date2` to the Date class.
+
+4. Round `date` to...
+    + the nearest year and call the column "nearest_year". Are all the years the same?
+    + "2010-01-01" and call the column "lower_decade"
+    + "2020-01-01" and call the column "upper_decade"
+

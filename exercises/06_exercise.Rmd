@@ -1,0 +1,27 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 22, 2019"
+output: html_document
+---
+
+# Pipe Operator Exercise solutions
+
+```{r}
+library(magrittr)
+```
+
+Import the example data. This data represents benthic macroinvertebrate data collected in the littoral zone of Onondaga, Otisco, and Cazenovia lakes.
+```{r}
+taxa.df <- file.path("data",
+          "zms_thesis-macro_2017-06-18.csv") %>% 
+  read.csv(stringsAsFactors = FALSE)
+```
+
+1. Extract the `final_id` column from `taxa.df` and pipe it into the function `toupper()`.
+    + Store it as an object called "upper.vec"
+
+2. Extract just unique strings from the `final_id` column of `taxa.df` by piping into the `unique()` function.
+
+3. Combine exercises 1 and 2 to return unique strings from the `final_id` column  of `taxa.df` represented as all caps.
+

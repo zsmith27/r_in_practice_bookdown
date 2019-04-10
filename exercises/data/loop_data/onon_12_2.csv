@@ -1,0 +1,9 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_12_2,onon,onon_12,2,43.081298,-76.210998,esf,kick net,6/26/2014,2,"",cryptochironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,cryptochironomus,"",6,30
+onon_12_2,onon,onon_12,2,43.081298,-76.210998,esf,kick net,6/26/2014,3,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",6,30
+onon_12_2,onon,onon_12,2,43.081298,-76.210998,esf,kick net,6/26/2014,71,"",pseudochironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,pseudochironomini,pseudochironomus,"",6,30
+onon_12_2,onon,onon_12,2,43.081298,-76.210998,esf,kick net,6/26/2014,14,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",6,30
+onon_12_2,onon,onon_12,2,43.081298,-76.210998,esf,kick net,6/26/2014,41,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",6,30
+onon_12_2,onon,onon_12,2,43.081298,-76.210998,esf,kick net,6/26/2014,2,"",procladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,procladiini,procladius,"",6,30
+onon_12_2,onon,onon_12,2,43.081298,-76.210998,esf,kick net,6/26/2014,1,"",trichoptera,ord,arthropoda,hexapoda,insecta,pterygota,trichoptera,"","","","","","",6,30
+onon_12_2,onon,onon_12,2,43.081298,-76.210998,esf,kick net,6/26/2014,1,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",6,30

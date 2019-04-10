@@ -1,0 +1,6 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_12_1,onon,onon_12,1,43.081298,-76.210998,esf,kick net,6/26/2014,1,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,6,30
+onon_12_1,onon,onon_12,1,43.081298,-76.210998,esf,kick net,6/26/2014,7,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",6,30
+onon_12_1,onon,onon_12,1,43.081298,-76.210998,esf,kick net,6/26/2014,68,"",paratanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,paratanytarsus,"",6,30
+onon_12_1,onon,onon_12,1,43.081298,-76.210998,esf,kick net,6/26/2014,3,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",6,30
+onon_12_1,onon,onon_12,1,43.081298,-76.210998,esf,kick net,6/26/2014,3,"",polypedilum,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,polypedilum,"",6,30

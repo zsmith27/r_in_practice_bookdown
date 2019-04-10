@@ -1,0 +1,14 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,8,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,9,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,3,"",polypedilum,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,polypedilum,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,6,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,1,"",synorthocladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",synorthocladius,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,16,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,1,"",procladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,procladiini,procladius,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,4,"",stenonema_femoratum,spe,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,pisciforma,heptageniidae,"","",stenonema,stenonema_femoratum,2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,2,"",stenacron,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,pisciforma,heptageniidae,"","",stenacron,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,1,early instar,stenonema,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,pisciforma,heptageniidae,"","",stenonema,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,1,"",sialis,gen,arthropoda,hexapoda,insecta,pterygota,megaloptera,"",sialidae,"","",sialis,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,1,"",hydroptila,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,spicipalpia,hydroptilidae,hydroptilinae,hydroptilini,hydroptila,"",2,30
+ot_11_2,ot,ot_11,2,42.846508,-76.2689514,esf,kick net,7/3/2014,83,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",2,30

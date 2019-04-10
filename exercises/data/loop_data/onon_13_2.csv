@@ -1,0 +1,12 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,2,"",dreissena_bugensis,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_bugensis,7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,2,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,65,"",chironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,chironomus,"",7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,1,"",cryptochironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,cryptochironomus,"",7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,42,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,9,"",glyptotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,glyptotendipes,"",7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,2,"",polypedilum,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,polypedilum,"",7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,3,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,2,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,1,"",procladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,procladiini,procladius,"",7,30
+onon_13_2,onon,onon_13,2,43.0843,-76.215797,esf,kick net,6/26/2014,2,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",7,30

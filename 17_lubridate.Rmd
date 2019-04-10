@@ -1,0 +1,141 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 15, 2019"
+output: html_document
+---
+
+# lubridate
+
+<center>
+![](images/hex_symbols/lubridate.png){width=200px} 
+</center>
+
+* __Link:__ https://lubridate.tidyverse.org/
+* __Index of Functions:__ https://lubridate.tidyverse.org/reference/index.html#section-date-time-parsing
+* __Cheat Sheet:__ https://rawgit.com/rstudio/cheatsheets/master/lubridate.pdf
+* __Chapter of R for Data Science:__ https://r4ds.had.co.nz/dates-and-times.html
+
+```{r}
+library(lubridate)
+suppressPackageStartupMessages(
+ library(dplyr) 
+)
+```
+
+### Example Data
+
+Import the example data. This data represents benthic macroinvertebrate data collected in the littoral zone of Onondaga, Otisco, and Cazenovia lakes.
+```{r}
+taxa.df <- file.path("data",
+          "zms_thesis-macro_2017-06-18.csv") %>% 
+  read.csv(stringsAsFactors = FALSE)
+```
+
+Preprocess `taxa.df` to only include unique instances of station IDs and sample dates. For more details about this process see the [select] and [distinct] sections.
+```{r}
+dates.df <- taxa.df %>% 
+  select(station_id, date) %>% 
+  distinct()
+
+DT::datatable(dates.df, options = list(columnDefs = list(list(className = 'dt-center', targets = 0:2))))
+```
+
+### mdy, ymd, dmy, ymd_hms, ...
+
+* __Definition:__ convert character or numeric data class to a date or datetime class. There are a lot of variations of this function that are specific to the format of your date or datetime.
+* __Link:__ https://www.rdocumentation.org/packages/lubridate/versions/1.7.4/topics/ymd
+
+In `dates.df`, the `date` column is imported as a character class and follows a "mm/dd/yyyy" format. The function `mdy()` can be used convert the character strings in the `date` column to a date class.
+```{r}
+mdy.df <- dates.df %>% 
+  mutate(date = mdy(date))
+
+DT::datatable(mdy.df, options = list(columnDefs = list(list(className = 'dt-center', targets = 0:2))))
+```
+
+In the example above, it is obvious the the format of the date has changed but it is not obvious that the R-class has changed. First look at the classes represented in the `dates.df`.
+```{r}
+sapply(dates.df, class)
+```
+
+Then looking at the column classes in `myd.df`, we can see `date` has changed to class "Date".
+```{r}
+sapply(mdy.df, class)
+```
+
+
+### year, month, mday, yday, hour, minute, and second
+
+* __Definition:__ these functions allow you to extract a specific feature of a date or datetime class. The returned values will no longer be a date or datetime class.
+* __Links:__ 
+    + year: https://lubridate.tidyverse.org/reference/year.html
+    + month:https://lubridate.tidyverse.org/reference/month.html 
+    + week: https://lubridate.tidyverse.org/reference/week.html
+    + day: https://lubridate.tidyverse.org/reference/day.html
+        + wday
+        + mday
+        + qday
+        + yday
+    + hour: https://lubridate.tidyverse.org/reference/hour.html
+    + minute: https://lubridate.tidyverse.org/reference/minute.html
+    + second: https://lubridate.tidyverse.org/reference/second.html
+
+Once a column is a date or datetime class, then lubridate functions make it easy to extract parts of the date, such as year, month, day, hour, minutes, seconds, etc. In the `mutate()` call below, I applied many but not all of the helpful functions for extracting datetime related information. The majority of these are straight forward; however, we can change `label` and `abbr` to alter the output of functions like `month()` and `wday()`.
+
+1. `label`
+    + `label = FALSE` returns a numeric value
+    + `label = TRUE` returns a character value
+2. `abbr`
+    + If `label = FALSE`, then `abbr` has no effect
+    + `label = TRUE` and `abbr = TRUE` returns an abbreviated character string
+        + week: Sun, Mon, Tue, Wed, Thu, Fri, Sat
+        + month: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+    + `label = TRUE` and `abbr = FALSE` returns an full character string
+        + week: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        + month: January, February, March, April, May, June, July, August, September, October, November, December
+        
+```{r}
+extract.df <- mdy.df %>% 
+  mutate(year = year(date),
+         month_int = month(date),
+         month_abv = month(date, label = TRUE),
+         month_full = month(date, label = TRUE, abbr = FALSE),
+         week = week(date),
+         day = day(date),
+         wday_int = wday(date),
+         wday_abv = wday(date, label = TRUE),
+         wday_full = wday(date, label = TRUE, abbr = FALSE),
+         mday = mday(date),
+         qday = qday(date),
+         yday = yday(date),
+         hour = hour(date),
+         minute = minute(date),
+         second = second(date))
+
+DT::datatable(extract.df, options = list(scrollX = TRUE))
+```
+
+### round_date, floor_date, and ceiling_date
+
+* __Definition:__ round a date or datetime value by a specified unit of time.
+* __Links:__ https://lubridate.tidyverse.org/reference/round_date.html
+
+`round_date()` will round the date or datetime by the specified unit of time, such as "15 minutes", "week", "month", or "year". I find it really convient that you can specify to the nearest "15 minutes". `floor_date()` and `ceiling_date()` provide similar functionality but always round down or up, respectively.
+```{r}
+round.df <- mdy.df %>% 
+  mutate(round_week = round_date(date, "week"),
+         round_month = round_date(date, "month"),
+         round_year = round_date(date, "year"),
+         round_year5 = round_date(date, "5 years"),
+         round_century = round_date(date, "100 years"),
+         floor_month = floor_date(date, "month"),
+         floor_year = floor_date(date, "year"),
+         ceiling_month = ceiling_date(date, "month"),
+         ceiling_year = ceiling_date(date, "year"))
+
+DT::datatable(round.df, options = list(scrollX = TRUE,
+                                       autoWidth = TRUE,
+                                       columnDefs = list(list(width = '70px', targets = c(2)))))
+```
+

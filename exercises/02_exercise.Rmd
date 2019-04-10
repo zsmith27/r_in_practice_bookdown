@@ -1,0 +1,17 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 22, 2019"
+output: html_document
+---
+
+# Data Type Exercises
+
+1. Create a character vector with 4 elements
+
+2. Verify that the vector created is character type
+
+3. Sort the character vector
+
+4. Convert the character vector to a factor vector and specify levels that are __NOT__ in alphabetical order and sort this factor vector.
+

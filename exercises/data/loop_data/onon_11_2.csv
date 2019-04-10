@@ -1,0 +1,10 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_11_2,onon,onon_11,2,43.0732,-76.204696,esf,kick net,6/27/2014,28,"",dreissena_bugensis,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_bugensis,3,30
+onon_11_2,onon,onon_11,2,43.0732,-76.204696,esf,kick net,6/27/2014,45,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,3,30
+onon_11_2,onon,onon_11,2,43.0732,-76.204696,esf,kick net,6/27/2014,1,"",menetus_dilatatus,spe,mollusca,"",gastropoda,"",basommatophora,"",planorbidae,"","",menetus,menetus_dilatatus,3,30
+onon_11_2,onon,onon_11,2,43.0732,-76.204696,esf,kick net,6/27/2014,3,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",3,30
+onon_11_2,onon,onon_11,2,43.0732,-76.204696,esf,kick net,6/27/2014,25,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",3,30
+onon_11_2,onon,onon_11,2,43.0732,-76.204696,esf,kick net,6/27/2014,1,"",procladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,procladiini,procladius,"",3,30
+onon_11_2,onon,onon_11,2,43.0732,-76.204696,esf,kick net,6/27/2014,1,"",acentria,gen,arthropoda,hexapoda,insecta,pterygota,lepidoptera,"",crambidae,nymphulinae,acentropini,acentria,"",3,30
+onon_11_2,onon,onon_11,2,43.0732,-76.204696,esf,kick net,6/27/2014,43,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",3,30
+onon_11_2,onon,onon_11,2,43.0732,-76.204696,esf,kick net,6/27/2014,1,"",hyalella,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,hyalellidae,"","",hyalella,"",3,30

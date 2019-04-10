@@ -1,0 +1,3 @@
+Example Metadata for "loop_data"
+
+This folder contains CSV files for the Loop Exercises. Do not include this file when you run your loop to import the CSVs in this folder.

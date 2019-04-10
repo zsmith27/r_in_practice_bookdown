@@ -1,0 +1,12 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,1,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,6,"",pisidium,gen,mollusca,"",bivalvia,heterodonta,veneroida,"",pisidiidae,"","",pisidium,"",6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,1,"",bezzia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,ceratopogonidae,ceratopogoninae,palpomyiini,bezzia,"",6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,1,"",cladotanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,cladotanytarsus,"",6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,9,"",cryptochironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,cryptochironomus,"",6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,70,"",polypedilum,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,polypedilum,"",6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,1,"",chironomidae,fam,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,"","","","",6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,2,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,2,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,3,"",chironomidae,fam,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,"","","","",6,30
+ot_3_1,ot,ot_3,1,42.8821716,-76.2922134,esf,kick net,7/2/2014,4,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",6,30

@@ -1,0 +1,64 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 24, 2019"
+output: html_document
+---
+
+# Data Structure Exercise Solutions
+
+1. Store "one", "two", "three", "four", "five" as a vector object called "char.vec".
+```{r}
+char.vec <- c("one", "two", "three", "four", "five")
+```
+
+2. Extract just "three" from char.vec.
+```{r}
+char.vec[3]
+```
+
+3. Extract "two" and "four" from char.vec.
+```{r}
+char.vec[c(2, 4)]
+```
+
+4. Show two ways to extract "two", "three", and "four".
+```{r}
+char.vec[2:4]
+char.vec[c(2, 3, 4)]
+```
+
+5. Import the file "zms_thesis-macro_2017-06-18.csv" from the folder "data" using a combination of `file.path()` and `read.csv()`. Wrap `read.csv()` within `head()`, which will only return the first 6 rows of the data frame. Store the data frame object as "taxa.df".
+```{r}
+taxa.df <- head(read.csv(file.path("data",
+                              "zms_thesis-macro_2017-06-18.csv"),
+                    stringsAsFactors = FALSE))
+```
+
+6. Show two ways to extract the column `final_id` from taxa.df.
+```{r}
+taxa.df$final_id
+
+taxa.df[, "final_id"]
+```
+
+7. Extract the second row from taxa.df (final_id should be "chironomus").
+```{r}
+taxa.df[2, ]
+```
+
+8. Extract the fourth value from `final_id` in `taxa.df` (should be "paratanytarsus").
+```{r}
+taxa.df$final_id[4]
+```
+
+9. Subset `taxa.df` to only include rows related to taxa from the class "insecta".
+```{r}
+taxa.df[taxa.df$class == "insecta", ]
+```
+
+11. Subset `taxa.df` to only include rows with the genera "chironomus" and "polypedilum".
+```{r}
+taxa.df[taxa.df$genus %in% c("chironomus", "polypedilum"), ]
+```
+

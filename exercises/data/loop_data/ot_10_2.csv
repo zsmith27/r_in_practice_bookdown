@@ -1,0 +1,14 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,1,"",dubiraphia,gen,arthropoda,hexapoda,insecta,pterygota,coleoptera,polyphaga,elmidae,elminae,elmini,dubiraphia,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,1,"",cryptochironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,cryptochironomus,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,11,"",glyptotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,glyptotendipes,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,6,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,2,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,7,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,18,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,1,"",synorthocladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",synorthocladius,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,1,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,2,"",caenis,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,furcatergalia,caenidae,caeninae,"",caenis,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,1,early instar,hydroptilidae,fam,arthropoda,hexapoda,insecta,pterygota,trichoptera,spicipalpia,hydroptilidae,"","","","",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,41,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",3,20
+ot_10_2,ot,ot_10,2,42.8404732,-76.2587051,esf,kick net,7/3/2014,14,"",caecidotea,gen,arthropoda,crustacea,malacostraca,eumalacostraca,isopoda,asellota,asellidae,"","",caecidotea,"",3,20

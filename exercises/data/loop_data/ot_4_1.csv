@@ -1,0 +1,18 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,10,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,5,"",pisidium,gen,mollusca,"",bivalvia,heterodonta,veneroida,"",pisidiidae,"","",pisidium,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,1,"",ferrissia_fragilis,spe,mollusca,"",gastropoda,"",basommatophora,"",ancylidae,"","",ferrissia,ferrissia_fragilis,4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,1,"",gyraulus_parvus,spe,mollusca,"",gastropoda,"",basommatophora,"",planorbidae,"","",gyraulus,gyraulus_parvus,4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,3,"",elimia_virginica,spe,mollusca,"",gastropoda,"",neotaenioglossa,"",pleuroceridae,"","",elimia,elimia_virginica,4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,1,"",valvata,gen,mollusca,"",gastropoda,"",heterostropha,"",valvatidae,"","",valvata,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,1,"",dubiraphia,gen,arthropoda,hexapoda,insecta,pterygota,coleoptera,polyphaga,elmidae,elminae,elmini,dubiraphia,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,9,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,2,"",parachironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,parachironomus,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,3,"",corynoneura,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",corynoneura,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,1,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,1,"",stenonema_femoratum,spe,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,pisciforma,heptageniidae,"","",stenonema,stenonema_femoratum,4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,1,early instar,stenonema,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,pisciforma,heptageniidae,"","",stenonema,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,1,"",hydroptila,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,spicipalpia,hydroptilidae,hydroptilinae,hydroptilini,hydroptila,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,10,"",crangonyx,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,crangonyctidae,"","",crangonyx,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,79,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",4,17
+ot_4_1,ot,ot_4,1,42.87389,-76.28724,esf,kick net,7/2/2014,34,"",caecidotea,gen,arthropoda,crustacea,malacostraca,eumalacostraca,isopoda,asellota,asellidae,"","",caecidotea,"",4,17

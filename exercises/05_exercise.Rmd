@@ -1,0 +1,33 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 24, 2019"
+output: html_document
+---
+
+# Loop Exercises
+
+```{r}
+data.path <- file.path("data", "loop_data")
+files.vec <- list.files(data.path)
+files.vec
+```
+
+```{r}
+files.vec <- files.vec[grepl(".csv", files.vec)]
+files.vec
+```
+
+1. Use `lapply()` to loop through `files.vec` and import each CSV.
+    + You will need to use `file.path()` and `data.path` (defined already above).
+    + Which function is used to import CSV files? What defualt arguement should be changed when using this function?
+
+2. Run `taxa.list`  within `dplyr::bind_rows()` and store the object as "taxa.df".
+
+3. Find taxa richness (number of unique taxa) for each `unique_id`.
+    + Create a vector of unique strings from the the `unique_id` column in `taxa.df`.
+    + Use the vector created above as the object you want to loop through in an `sapply()` call.
+    + within the `sapply()` call, subset `taxa.df` to only include rows equivalent to a single string from the `unique_id` vector.
+    + Use `nrow()` on the `taxa.df` subset. This will be equivalent to taxaonomic richness becuase each row in `taxa.df` represents a single taxon.
+
+4. How many "ephemeroptera" (mayflies) were found in each lake?

@@ -1,0 +1,7 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_14_2,onon,onon_14,2,43.0886,-76.227996,esf,kick net,6/27/2014,95,"",chironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,chironomus,"",6,30
+onon_14_2,onon,onon_14,2,43.0886,-76.227996,esf,kick net,6/27/2014,4,"",polypedilum,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,polypedilum,"",6,30
+onon_14_2,onon,onon_14,2,43.0886,-76.227996,esf,kick net,6/27/2014,8,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",6,30
+onon_14_2,onon,onon_14,2,43.0886,-76.227996,esf,kick net,6/27/2014,2,"",orthocladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",orthocladius,"",6,30
+onon_14_2,onon,onon_14,2,43.0886,-76.227996,esf,kick net,6/27/2014,2,"",procladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,procladiini,procladius,"",6,30
+onon_14_2,onon,onon_14,2,43.0886,-76.227996,esf,kick net,6/27/2014,5,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",6,30

@@ -1,0 +1,12 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,10,"",dreissena_bugensis,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_bugensis,4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,18,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,4,"",amnicola,gen,mollusca,"",gastropoda,"",neotaenioglossa,"",hydrobiidae,"","",amnicola,"",4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,1,"",physa,gen,mollusca,"",gastropoda,"",basommatophora,"",physidae,"","",physa,"",4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,2,"",menetus_dilatatus,spe,mollusca,"",gastropoda,"",basommatophora,"",planorbidae,"","",menetus,menetus_dilatatus,4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,1,"",chironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,chironomus,"",4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,3,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,1,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,7,"",psectrocladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",psectrocladius,"",4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,1,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",4,30
+onon_5_2,onon,onon_5,2,43.0946,-76.199996,esf,kick net,6/23/2014,63,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",4,30

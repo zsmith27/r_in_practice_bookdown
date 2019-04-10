@@ -1,0 +1,11 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,116,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,2,30
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,2,"",ferrissia_fragilis,spe,mollusca,"",gastropoda,"",basommatophora,"",ancylidae,"","",ferrissia,ferrissia_fragilis,2,30
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,2,"",ferrissia,gen,mollusca,"",gastropoda,"",basommatophora,"",ancylidae,"","",ferrissia,"",2,30
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,1,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",2,30
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,8,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",2,30
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,1,"",thienemanniella,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",thienemanniella,"",2,30
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,4,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",2,30
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,1,"",choroterpes,gen,arthropoda,hexapoda,insecta,pterygota,ephemeroptera,furcatergalia,leptophlebiidae,"","",choroterpes,"",2,30
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,1,"",crangonyx,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,crangonyctidae,"","",crangonyx,"",2,30
+ot_15_2,ot,ot_15,2,42.8736038,-76.3053894,esf,kick net,7/2/2014,9,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",2,30

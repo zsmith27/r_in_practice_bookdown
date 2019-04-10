@@ -1,0 +1,79 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 24, 2019"
+output: html_document
+---
+
+# Function Exercise Solutions
+
+1. Create a function called "pct", for "percent," with two arguements (`value` and `total`). The function divides `value` by `total` and then multiplies by a constant, 100.
+```{r}
+pct <- function(value, total) {
+  value / total * 100
+}
+```
+
+2. Test that your `pct()` function returns 6 if `value = 50, total = 100`
+```{r}
+pct(value = 50, total = 100)
+pct(50, 100)
+```
+
+3. Restrict the `pct()` function to only work if each of the arguements supplied are length one. Create error messages specific to each arguement, which will inform you of which arguement failed to meet the this requirement.
+```{r}
+pct <- function(value, total) {
+  if (length(value) != 1) stop("value must be length 1")
+  if (length(total) != 1) stop("total must be length 1")
+  
+  value / total * 100
+}
+```
+
+4. Test that the messages created in exercise 3 work correctly on:
+    + `value = 50, total = 100`
+    + `value = c(25, 50), total = 100`
+    + `value = 50, total = c(100, 200)`
+```{r, error=TRUE}
+pct(50, 100) 
+pct(c(25, 50), 100)
+pct(50, c(100, 200))
+```
+
+5. Which message will you recieve if `value = c(25, 50), total = c(100, 200)`? Why is this the only message that is returned?
+```{r, error=TRUE}
+pct(c(25, 50), c(100, 200))
+```
+
+6. Can you make a function that standardizes the three length checks? 
+    + Call the function "length_check"
+    + Hints:
+        + Should have 1 arguement
+        + Checkout `paste()` (?paste)
+        + Use `substitute()`  within the `paste()` call to return the name of the arguement supplied (i.e., "value" or "total")
+```{r}
+check_length <- function(x) {
+  if (length(x) != 1) stop(paste(substitute(x), "must be length 1"))
+}
+```
+
+7. Add `check_length()` to your `pct()` function.
+```{r}
+pct <- function(value, total) {
+  check_length(value)
+  check_length(total)
+  
+ value / total * 100
+}
+```
+
+8. Test the your updated `pct()` function on:
+    + `value = 50, total = 100`
+    + `value = c(25, 50), total = 100`
+    + `value = 50, total = c(100, 200)`
+```{r, error=TRUE}
+pct(50, 100) 
+pct(c(25, 50), 100)
+pct(50, c(100, 200))
+```
+

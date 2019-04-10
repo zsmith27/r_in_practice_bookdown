@@ -1,0 +1,15 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,2,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,15,"",cryptochironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,cryptochironomus,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,2,"",cryptotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,cryptotendipes,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,4,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,15,"",paratanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,paratanytarsus,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,8,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,13,"",polypedilum,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,polypedilum,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,3,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,2,"",procladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,procladiini,procladius,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,15,"",chironomidae,fam,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,"","","","",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,1,"",oecetis,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,integripalpia,leptoceridae,leptocerinae,oecetini,oecetis,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,5,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,3,"",hyalella,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,hyalellidae,"","",hyalella,"",7,45
+onon_16_1,onon,onon_16,1,43.103698,-76.2425,esf,kick net,6/26/2014,1,"",caecidotea,gen,arthropoda,crustacea,malacostraca,eumalacostraca,isopoda,asellota,asellidae,"","",caecidotea,"",7,45

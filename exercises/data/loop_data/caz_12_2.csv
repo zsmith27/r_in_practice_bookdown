@@ -1,0 +1,20 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,1,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,7,"",pisidium,gen,mollusca,"",bivalvia,heterodonta,veneroida,"",pisidiidae,"","",pisidium,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,2,"",ferrissia_fragilis,spe,mollusca,"",gastropoda,"",basommatophora,"",ancylidae,"","",ferrissia,ferrissia_fragilis,3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,1,"",amnicola_limosus,spe,mollusca,"",gastropoda,"",neotaenioglossa,"",hydrobiidae,"","",amnicola,amnicola_limosus,3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,1,"",physa,gen,mollusca,"",gastropoda,"",basommatophora,"",physidae,"","",physa,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,1,"",elimia_acuta,spe,mollusca,"",gastropoda,"",neotaenioglossa,"",pleuroceridae,"","",elimia,elimia_acuta,3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,2,"",viviparus_georgianus,spe,mollusca,"",gastropoda,prosobranchia,architaenioglossa,"",viviparidae,"","",viviparus,viviparus_georgianus,3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,18,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,1,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,2,"",rheotanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,rheotanytarsus,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,42,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,1,"",corynoneura,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",corynoneura,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,1,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,2,"",psectrocladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",psectrocladius,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,4,"",thienemanniella,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",thienemanniella,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,9,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,3,"",hydroptila,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,spicipalpia,hydroptilidae,hydroptilinae,hydroptilini,hydroptila,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,2,"",mystacides,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,integripalpia,leptoceridae,leptocerinae,mystacidini,mystacides,"",3,30
+caz_12_2,caz,caz_12,2,42.9440193,-75.8760834,esf,kick net,7/1/2014,23,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",3,30

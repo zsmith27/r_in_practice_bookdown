@@ -1,0 +1,29 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 24, 2019"
+output: html_document
+---
+
+# Data Type Exercise Solutions
+
+1. Create a character vector with 4 elements.
+```{r}
+c("w", "x", "y", "z")
+```
+
+2. Verify that the vector created is character type.
+```{r}
+class(c("w", "x", "y", "z"))
+class(c("w", "x", "y", "z")) == "character"
+```
+3. Sort the character vector.
+```{r}
+sort(c("w", "x", "y", "z"))
+```
+
+4. Convert the character vector to a factor vector and specify levels that are __NOT__ in alphabetical order and sort this factor vector.
+```{r}
+sort(factor(c("w", "x", "y", "z"), levels = c("x", "z", "w", "y")))
+```
+

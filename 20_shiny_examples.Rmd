@@ -1,0 +1,107 @@
+---
+title: "Shiny Example"
+author: "Zachary M. Smith"
+date: "February 25, 2019"
+output: html_document
+runtime: shiny
+---
+
+# Default Shiny Example
+
+If you select the "Single File" option when creating a __shiny__ application, you will get the example code below. This file contains both the ui and server aspects of our __shiny__ app. This works well if the app is very simple, but I find this becomes very difficult to manage as the app becomes more complex.
+
+The app is rendered below the code chunk; you should be able to interact with it. Let's walk through the logic of this app.
+
+* ui
+    + The ui represents a `fluidPage()`
+    + `titlePanel()` hads a title to the app
+    + Create an application with a sidebar using `sidebarLayout()`
+        + Specify what should be represented in the sidebar within `sidebarPanel()`
+            + This app includes a slider using `sliderInput()`
+        + Specify what should appear outside of the sidebar using `mainPanel()`
+            + Plot the output from the object created within the server using `plotOutput()`.
+            + "distPlot" within `plotOutput()` is in reference to the object `output$distPlot` created in the server with `renderPlot()`
+* server
+    + server represents a function with two arguements `input` and `output`
+        + `input` represents objects from the ui
+        + `output` represents objects that were created in the server but you want to reference in the ui
+    + `renderPlot()` is used, in this case, to create an histogram for which bin size can be updated
+        + This object is stored using `output$distPlot <- renderPlot({})`. 
+            + Specifying `output` allows us to reference this object in the ui. 
+            + `distPlot` is the name we will use in the ui to reference this object, which can be seen in the ui call `plotOutput("distPlot")`
+        + `renderPlot({})` requires curly brackets "{}" within the function call
+        + Within `renderPlot({})` is the code that creates the histogram
+            + `x <- faithful[, 2]` 
+                + subsets the `faithful` data set (pre-loaded in base-R)
+                + `x` represents the second column of `faithful` stored as a vector.
+            + `bins <- seq(min(x), max(x), length.out = input$bins + 1)`
+                + `bins` will be used to specify the break-points used to create the bin size in the histogram creation
+                + `seq(from, to, length.out)`
+                    + sequence `from` one value `to` another
+                    + `length.out` is used to specify how many breakpoints should be between the specified `from` and `to` arguements
+                        + `length.out = input$bins + 1`
+                            + `input$bins` comes from the `sliderInput()` within the ui\
+                            + `input$bins` is that part that provides the updates to the histogram, ultimately making this app interactive
+            + `hist(x, breaks = bins, col = 'darkgray', border = 'white')`
+                + `hist()` creates a histogram plot
+                + `x` is the `faithful` vector created above
+                + `breaks = bins` specify the break-points for the histogram bars
+                + `col = 'darkgray'` specify the color of the histogram bars
+                + `border = 'white'` specify the color of the outline around the histogram bars
+* `shinyApp(ui = ui, server = server)`
+    + The arguements to `shinyApp()` are `ui` and `server`
+    + Renders the shiny app by specifying the appropriate ui and server objects
+    + In this case, the arguements to `shinyApp()` are the same as the object names
+```{r}
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
+
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+   
+   # Application title
+   titlePanel("Old Faithful Geyser Data"),
+   
+   # Sidebar with a slider input for number of bins 
+   sidebarLayout(
+      sidebarPanel(
+         sliderInput("bins",
+                     "Number of bins:",
+                     min = 1,
+                     max = 50,
+                     value = 30)
+      ),
+      
+      # Show a plot of the generated distribution
+      mainPanel(
+         plotOutput("distPlot")
+      )
+   )
+)
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+   
+   output$distPlot <- renderPlot({
+      # generate bins based on input$bins from ui.R
+      x    <- faithful[, 2] 
+      bins <- seq(min(x), max(x), length.out = input$bins + 1)
+      
+      # draw the histogram with the specified number of bins
+      hist(x, breaks = bins, col = 'darkgray', border = 'white')
+   })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
+
+

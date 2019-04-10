@@ -1,0 +1,11 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,1,"",pisidium,gen,mollusca,"",bivalvia,heterodonta,veneroida,"",pisidiidae,"","",pisidium,"",5,30
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,1,"",ferrissia_fragilis,spe,mollusca,"",gastropoda,"",basommatophora,"",ancylidae,"","",ferrissia,ferrissia_fragilis,5,30
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,1,"",bezzia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,ceratopogonidae,ceratopogoninae,palpomyiini,bezzia,"",5,30
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,1,"",cryptochironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,cryptochironomus,"",5,30
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,4,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",5,30
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,5,"",parachironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,parachironomus,"",5,30
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,2,"",tanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,tanytarsus,"",5,30
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,38,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",5,30
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,1,"",procladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,procladiini,procladius,"",5,30
+ot_9_1,ot,ot_9,1,42.8366661,-76.2450256,esf,kick net,7/3/2014,4,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",5,30

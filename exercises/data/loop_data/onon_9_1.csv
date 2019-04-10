@@ -1,0 +1,4 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_9_1,onon,onon_9,1,43.063301,-76.182197,esf,kick net,6/24/2014,15,"",chironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,chironomus,"",28,30
+onon_9_1,onon,onon_9,1,43.063301,-76.182197,esf,kick net,6/24/2014,1,"",paratendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,paratendipes,"",28,30
+onon_9_1,onon,onon_9,1,43.063301,-76.182197,esf,kick net,6/24/2014,2,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",28,30

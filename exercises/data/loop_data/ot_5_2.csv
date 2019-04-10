@@ -1,0 +1,14 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,4,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,1,"",pisidium,gen,mollusca,"",bivalvia,heterodonta,veneroida,"",pisidiidae,"","",pisidium,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,4,"",elimia_virginica,spe,mollusca,"",gastropoda,"",neotaenioglossa,"",pleuroceridae,"","",elimia,elimia_virginica,4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,1,"",valvata,gen,mollusca,"",gastropoda,"",heterostropha,"",valvatidae,"","",valvata,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,10,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,9,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,1,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,1,"",hemerodromia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,brachycera,empididae,hemerodromiinae,hemerodromiini,hemerodromia,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,2,"",hydroptila,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,spicipalpia,hydroptilidae,hydroptilinae,hydroptilini,hydroptila,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,1,"",oecetis,gen,arthropoda,hexapoda,insecta,pterygota,trichoptera,integripalpia,leptoceridae,leptocerinae,oecetini,oecetis,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,1,"",crangonyx,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,crangonyctidae,"","",crangonyx,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,67,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",4,19
+ot_5_2,ot,ot_5,2,42.8654137,-76.278923,esf,kick net,7/3/2014,1,"",orconectes_obscurus,spe,arthropoda,crustacea,malacostraca,eumalacostraca,decapoda,pleocyemata,cambaridae,cambarinae,"",orconectes,orconectes_obscurus,4,19

@@ -1,0 +1,11 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,1,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,15,25
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,30,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",15,25
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,17,"",glyptotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,glyptotendipes,"",15,25
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,1,"",polypedilum,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,polypedilum,"",15,25
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,1,"",pseudochironomus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,pseudochironomini,pseudochironomus,"",15,25
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,12,"",rheotanytarsus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,tanytarsini,rheotanytarsus,"",15,25
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,17,"",cricotopus,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",cricotopus,"",15,25
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,11,"",orthocladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",orthocladius,"",15,25
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,1,"",psectrocladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",psectrocladius,"",15,25
+onon_10_2,onon,onon_10,2,43.067001,-76.195297,esf,kick net,7/8/2014,18,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",15,25

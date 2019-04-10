@@ -1,0 +1,190 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 12, 2019"
+output: html_document
+---
+
+# tidyr
+
+<center>
+![](images/hex_symbols/tidyr.png){width=200px} 
+</center>
+
+* __Link:__ https://tidyr.tidyverse.org/
+* __Index of Functions:__ https://tidyr.tidyverse.org/reference/index.html
+* __Chapter of R for Data Science:__ https://r4ds.had.co.nz/tidy-data.html
+
+```{r}
+library(tidyr)
+suppressPackageStartupMessages(
+ library(dplyr) 
+)
+```
+
+### Example Data
+
+Import the example data. This data represents benthic macroinvertebrate data collected in the littoral zone of Onondaga, Otisco, and Cazenovia lakes.
+```{r}
+taxa.df <- file.path("data",
+          "zms_thesis-macro_2017-06-18.csv") %>% 
+  read.csv(stringsAsFactors = FALSE)
+```
+
+Preprocess `taxa.df` to just represent order-level taxonomic counts per sample. For more details about this process see the [summarize] section.
+```{r}
+ord.df <- taxa.df %>% 
+  select(unique_id, order, count) %>% 
+  group_by(unique_id, order) %>% 
+  summarize(count = sum(count)) %>% 
+  ungroup()
+
+DT::datatable(ord.df, options = list(columnDefs = list(list(className = 'dt-center', targets = 0:3))))
+```
+
+
+### spread
+
+* __Definition:__ transpose data to a wide data format.
+* __Link:__ https://tidyr.tidyverse.org/reference/spread.html
+
+In some instances it might be beneficial to transpose a data frame from a long format to a wide format, which can be simply done with `spread()`. `spread()` requires two columns to be specified:
+
+1. __key:__ a column name, for which the unique values in the column will become column headers.
+2. __value:__ a column name, for which the values will be represented in the rows appropriately associated with the __key__ column.
+
+The remaining columns will be used as an anchor point to represent a unique key for each row. If these remaining columns are not unique, an error will be returned. You will need to figure out why there are duplicate rows in the unique identifier columns and how to remedy the issue.
+
+In the example below, `ord.df` is transformed from a long to a wide format. `order` values now represent column headers and the values from the `count` column have been filled in appropriately under the associated  new `order` column headers.
+```{r}
+wide.df <- ord.df %>% 
+  spread(order, count)
+
+DT::datatable(wide.df, options = list(scrollX = TRUE))
+```
+
+In the example above, any instance where a taxon was not found in a sample, the value is represented as an `NA` (represented as a blank space by the output of `DT::datatable()`). However, in this example it would be more appropriate to represent all of these values as a zero. To do this we just need to specify `fill = 0` within the `spread()` call. In the table below, there are no `NAs`(represented as a blank space by the output of `DT::datatable()`).
+```{r}
+wide.df <- ord.df %>% 
+  spread(order, count, fill = 0)
+
+DT::datatable(wide.df, options = list(scrollX = TRUE))
+```
+
+### gather
+
+* __Definition:__ transpose data to a long data format.
+* __Link:__ https://tidyr.tidyverse.org/reference/gather.html
+
+In most instances, packages from the __tidyverse__ are designed to operate on data in a long data format. `gather()` makes is it simple to convert a wide format to a long format.
+
+In the this code chunk, the `wide.df` is used from the [spread] section and will be converted from a wide to a long data format using `gather()`. `order` represents a new column name, which by default will include all column names from `wide.df`. `count` also represents a new column name, which will represent all of the values that were present in each column. If just `gather(order, count)` is applied, the `unique_id` is included within the `order` column and the values within from the `unique_id` column are included within the `count` column. This is not correct. The next code chunk will correct this issue.
+```{r}
+long.df <- wide.df %>% 
+  gather(order, count)
+
+DT::datatable(long.df,
+              options = list(columnDefs = list(list(className = 'dt-center', targets = 0:2))))
+```
+
+Adding `-unique_id` to the end of the `gather()` call will retain `unique_id` in the final output but exclude this column from being included in the conversion of the remaining headers to the `order` column and the remaining row values to the `count` column. One or more columns can be excluded following the `-unique_id` example.
+```{r}
+long.df <- wide.df %>% 
+  gather(order, count, -unique_id)
+
+DT::datatable(long.df,
+              options = list(columnDefs = list(list(className = 'dt-center', targets = 0:3))))
+```
+
+### complete
+
+* __Definition:__ "complete" a data frame by adding in missing combinations of data.
+* __Link:__ https://tidyr.tidyverse.org/reference/complete.html
+
+In the [gather] section, `long.df` has 1,440 rows, while `taxa.df` is only 1,402 rows. This descrepancy is due to `taxa.df` not containing any zero counts, while `long.df` has zero counts from transforming from a wide data format (`wide.df`). Having all possible combinations of taxa present per station can be helpful when plotting or performing calculations. If you are starting with a long data format, you do not want to convert it to a wide data format with `spread()` and then back to a long data format with `gather()`. Instead you can use `complete()` to fill in missing combinations.
+
+Here `complete()` is used to make sure each `unique_id` represents one row for each order-level (`order`) taxon in the data set. The `fill` arguement requires a list, within which you specify what value you want each column to represent if a new combination is added to the data set. In this example, new combinations means that a taxon was not identified in a given sample, and therefore the count should represent zero (`count = 0`).
+```{r}
+complete.df <- ord.df %>% 
+  complete(order,
+           nesting(unique_id),
+           fill = list(count = 0))
+
+DT::datatable(complete.df,
+              options = list(columnDefs = list(list(className = 'dt-center', targets = 0:3))))
+```
+
+
+### separate
+
+* __Definition:__ divide a single column into multiple columns by some specified character or pattern.
+* __Link:__ https://tidyr.tidyverse.org/reference/separate.html
+
+In some instances, a data frame may contain a column that has concatenated information that is separated by a common character or pattern. It may be beneficial to extract this concatenated information into separate columns to make it easier to perform subsequent tasks, such as filtering. `separate()` can be used to make this a simple task.
+
+This example uses `long.df` from the [gather] section. In the `separate()` call:
+
+1. `unique_id` refers to the name of the column to be split
+2. `c("lake", "station_id", "replicate")` refers to the new column names that the split values from `unique_id` will fill
+3. `sep = "_"` specifies that the strings in `unique_id` should be split by underscores
+
+The default of `separate()` is to remove (`remove = TRUE`) the original column `unique_id` from the returned data frame.
+```{r}
+sep.df <- long.df %>% 
+  separate(unique_id, c("lake", "station_id", "replicate"), sep = "_")
+
+DT::datatable(sep.df,
+              options = list(columnDefs = list(list(className = 'dt-center', targets = 0:5))))
+```
+
+I often find it helpful to specify `remove = FALSE`, which, in this example, will split `unique_id` into several new columns but also retain `unique_id in the final output.
+```{r}
+sep.df <- long.df %>% 
+  separate(unique_id,
+           c("lake", "station_id", "replicate"),
+           sep = "_",
+           remove = FALSE)
+
+DT::datatable(sep.df,
+              options = list(columnDefs = list(list(className = 'dt-center', targets = 0:6))))
+```
+
+### unite
+
+* __Definition:__ concatenate multiple columns values into a single string represented in a new column.
+* __Link:__ https://tidyr.tidyverse.org/reference/unite.html
+
+`unite()` is the opposite of [separate], it is used to combine values from multiple columns into a single string separated by a common character or pattern.
+
+Using `sep.df`, created in the [separate] section, columns `lake`, `station_id`, and `replicate` can be concatenated into a single string within a new column using `unite()`. 
+
+In the `unite()` call:
+
+1. `"unique_id2"` refers to the new column name that will contain the concatenated strings from the subsequently specified columns
+2. `c("lake", "station_id", "replicate")` refers to the column names that contain the values that we want to be concatenated in `unique_id2`.
+3. `sep = "_"` specifies that the strings from `c("lake", "station_id", "replicate")` should be denoted in `unique_id2` by an underscore
+
+The default of `unite()` is to remove (`remove = TRUE`) the concatenated columns (`c("lake", "station_id", "replicate")`) from the returned data frame.
+```{r}
+unite.df <- sep.df %>% 
+  unite("unique_id2",
+        c("lake", "station_id", "replicate"),
+        sep = "-")
+
+DT::datatable(unite.df,
+              options = list(columnDefs = list(list(className = 'dt-center', targets = 0:4))))
+```
+
+In some cases I find it useful to specify `remove = FALSE`, which, in this example, will retain `lake`, `station_id`, and `replicate` in the final output.
+```{r}
+unite.df <- sep.df %>% 
+  unite("unique_id2",
+        c("lake", "station_id", "replicate"),
+        sep = "-",
+        remove = FALSE)
+
+DT::datatable(unite.df,
+              options = list(columnDefs = list(list(className = 'dt-center', targets = 0:7))))
+```
+
+

@@ -1,0 +1,8 @@
+unique_id,lake,station_id,sample_number,lat,long,agency_code,method,date,count,life_stage,final_id,taxon_level,phylum,subphylum,class,subclass,order,suborder,family,subfamily,tribe,genus,species,picked,squares
+ot_13_2,ot,ot_13,2,42.8589745,-76.2888336,esf,kick net,7/2/2014,76,"",dreissena_polymorpha,spe,mollusca,"",bivalvia,heterodonta,veneroida,"",dreissenidae,"","",dreissena,dreissena_polymorpha,2,30
+ot_13_2,ot,ot_13,2,42.8589745,-76.2888336,esf,kick net,7/2/2014,4,"",dicrotendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,dicrotendipes,"",2,30
+ot_13_2,ot,ot_13,2,42.8589745,-76.2888336,esf,kick net,7/2/2014,5,"",microtendipes,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,chironominae,chironomini,microtendipes,"",2,30
+ot_13_2,ot,ot_13,2,42.8589745,-76.2888336,esf,kick net,7/2/2014,1,"",synorthocladius,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,orthocladiinae,"",synorthocladius,"",2,30
+ot_13_2,ot,ot_13,2,42.8589745,-76.2888336,esf,kick net,7/2/2014,3,"",ablabesmyia,gen,arthropoda,hexapoda,insecta,pterygota,diptera,nematocera,chironomidae,tanypodinae,pentaneurini,ablabesmyia,"",2,30
+ot_13_2,ot,ot_13,2,42.8589745,-76.2888336,esf,kick net,7/2/2014,11,"",gammarus,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,gammaridae,"","",gammarus,"",2,30
+ot_13_2,ot,ot_13,2,42.8589745,-76.2888336,esf,kick net,7/2/2014,1,"",hyalella,gen,arthropoda,crustacea,malacostraca,eumalacostraca,amphipoda,gammaridea,hyalellidae,"","",hyalella,"",2,30

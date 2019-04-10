@@ -1,0 +1,29 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 22, 2019"
+output: html_document
+---
+
+# Data Structure Exercises
+
+1. Store "one", "two", "three", "four", "five" as a vector object called "char.vec".
+
+2. Extract just "three" from char.vec.
+
+3. Extract "two" and "four" from char.vec.
+
+4. Show two ways to extract "two", "three", and "four".
+
+5. Import the file "zms_thesis-macro_2017-06-18.csv" from the folder "data" using a combination of `file.path()` and `read.csv()`. Wrap `read.csv()` within `head()`, which will only return the first 6 rows of the data frame. Store the data frame object as "taxa.df".
+
+6. Show two ways to extract the column `final.df` from taxa.df.
+
+7. Extract the second row from taxa.df (final_id should be "chironomus").
+
+8. Extract the fourth value from `final_id` in `taxa.df` (should be "paratanytarsus").
+
+9. Subset `taxa.df` to only include rows related to taxa from the class "insecta".
+
+11. Subset `taxa.df` to only include rows with the genera "chironomus" and "polypedilum".
+

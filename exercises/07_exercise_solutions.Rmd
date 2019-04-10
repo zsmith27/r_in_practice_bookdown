@@ -1,0 +1,76 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 24, 2019"
+output: html_document
+---
+
+
+# dplyr Exercise Solutions
+
+Load __dplyr__.
+```{r}
+suppressPackageStartupMessages(
+  library(dplyr)
+)
+```
+
+## Example Data
+
+Import the example data. This data represents benthic macroinvertebrate data collected in the littoral zone of Onondaga, Otisco, and Cazenovia lakes 
+```{r}
+taxa.df <- file.path("data",
+                     "zms_thesis-macro_2017-06-18.csv") %>% 
+  read.csv(stringsAsFactors = FALSE)
+
+DT::datatable(taxa.df, options = list(scrollX = TRUE))
+```
+
+
+1. Subset the data to only include the columns `lake, station_id, sample_number, order, family, count` and store the data frame as an object named "sub.df".
+```{r}
+sub.df <- taxa.df %>% 
+  select(lake, station_id, sample_number, order, family, count)
+```
+
+2. Change the  column names in `sub.df` from "count" and "family" to "abund" and "fam", respectively.
+```{r}
+sub.df <- sub.df %>% 
+  rename(abund = count,
+         fam = family)
+```
+
+3. Subset `sub.df` to only include samples from Onondaga Lake ("onon") and represent represent the first sample collected (see `sample_number`). Store this object as "onon.df".
+```{r}
+onon.df <- sub.df %>% 
+  filter(lake == "onon",
+         sample_number == 1)
+```
+
+4. Sum abundances (`abund`) within `onon.df` to remove duplicate instances of families (`fam`) per station (`station_id`). 
+    + aggregate by `lake, station_id, order, fam`
+    + keep `abund` as the summed column name
+```{r}
+onon.df <- onon.df %>% 
+  group_by(lake, station_id, order, fam) %>% 
+  summarize(abund = sum(abund)) %>% 
+  ungroup()
+```
+
+5. Aggregate by `station_id` within `onon.df` and find the total abundance (`abund`) per `station_id`. Store this column as "total" in `onon.df`.
+```{r}
+onon.df <- onon.df %>% 
+  group_by(station_id) %>% 
+  mutate(total = sum(abund)) %>% 
+  ungroup()
+```
+
+6. Calculate the percentage of the sample each family (`fam`) composes per station (`station_id`).
+```{r}
+onon.df <- onon.df %>% 
+  mutate(pct = abund / total * 100)
+```
+
+
+
+

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>18 ggplot2 | R in Practice</title>
+  <meta name="description" content="18 ggplot2 | R in Practice">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="18 ggplot2 | R in Practice" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="18 ggplot2 | R in Practice" />
+  
+  
+  
+
+<meta name="author" content="Zachary M. Smith">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lubridate.html">
+<link rel="next" href="shiny.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.5/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#goals"><i class="fa fa-check"></i><b>1.1</b> Goals</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#tip"><i class="fa fa-check"></i><b>1.1.1</b> Tip</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#what-is-r"><i class="fa fa-check"></i><b>1.2</b> What is R?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#benefits-of-using-r"><i class="fa fa-check"></i><b>1.2.1</b> Benefits of Using R</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#r-packages"><i class="fa fa-check"></i><b>1.2.2</b> R Packages</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="quick-reference.html"><a href="quick-reference.html"><i class="fa fa-check"></i><b>2</b> Quick Reference</a></li>
+<li class="chapter" data-level="3" data-path="installation-links.html"><a href="installation-links.html"><i class="fa fa-check"></i><b>3</b> Installation Links</a><ul>
+<li class="chapter" data-level="3.1" data-path="installation-links.html"><a href="installation-links.html#updating-software-and-packages"><i class="fa fa-check"></i><b>3.1</b> Updating Software and Packages</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="installation-links.html"><a href="installation-links.html#r"><i class="fa fa-check"></i><b>3.1.1</b> R</a></li>
+<li class="chapter" data-level="3.1.2" data-path="installation-links.html"><a href="installation-links.html#rstudio"><i class="fa fa-check"></i><b>3.1.2</b> RStudio</a></li>
+<li class="chapter" data-level="3.1.3" data-path="installation-links.html"><a href="installation-links.html#r-packages-1"><i class="fa fa-check"></i><b>3.1.3</b> R-Packages</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rstudio-1.html"><a href="rstudio-1.html"><i class="fa fa-check"></i><b>4</b> RStudio</a><ul>
+<li class="chapter" data-level="4.1" data-path="rstudio-1.html"><a href="rstudio-1.html#create-a-new-script"><i class="fa fa-check"></i><b>4.1</b> Create a New Script</a></li>
+<li class="chapter" data-level="4.2" data-path="rstudio-1.html"><a href="rstudio-1.html#rstudio-overview"><i class="fa fa-check"></i><b>4.2</b> RStudio Overview</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="rstudio-1.html"><a href="rstudio-1.html#source-window"><i class="fa fa-check"></i><b>4.2.1</b> Source Window</a></li>
+<li class="chapter" data-level="4.2.2" data-path="rstudio-1.html"><a href="rstudio-1.html#console-window"><i class="fa fa-check"></i><b>4.2.2</b> Console Window</a></li>
+<li class="chapter" data-level="4.2.3" data-path="rstudio-1.html"><a href="rstudio-1.html#environment-history-connections-build-and-git"><i class="fa fa-check"></i><b>4.2.3</b> Environment, History, Connections, Build, and Git</a></li>
+<li class="chapter" data-level="4.2.4" data-path="rstudio-1.html"><a href="rstudio-1.html#files-plots-packages-help-and-viewer"><i class="fa fa-check"></i><b>4.2.4</b> Files, Plots, Packages, Help, and Viewer</a></li>
+<li class="chapter" data-level="4.2.5" data-path="rstudio-1.html"><a href="rstudio-1.html#files-tab"><i class="fa fa-check"></i><b>4.2.5</b> Files Tab</a></li>
+<li class="chapter" data-level="4.2.6" data-path="rstudio-1.html"><a href="rstudio-1.html#plots-tab"><i class="fa fa-check"></i><b>4.2.6</b> Plots Tab</a></li>
+<li class="chapter" data-level="4.2.7" data-path="rstudio-1.html"><a href="rstudio-1.html#packages-tab"><i class="fa fa-check"></i><b>4.2.7</b> Packages Tab</a></li>
+<li class="chapter" data-level="4.2.8" data-path="rstudio-1.html"><a href="rstudio-1.html#help-tab"><i class="fa fa-check"></i><b>4.2.8</b> Help Tab</a></li>
+<li class="chapter" data-level="4.2.9" data-path="rstudio-1.html"><a href="rstudio-1.html#viewer-tab"><i class="fa fa-check"></i><b>4.2.9</b> Viewer Tab</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="rstudio-1.html"><a href="rstudio-1.html#shortcuts"><i class="fa fa-check"></i><b>4.3</b> Shortcuts</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="r-project.html"><a href="r-project.html"><i class="fa fa-check"></i><b>5</b> R Project</a><ul>
+<li class="chapter" data-level="5.1" data-path="r-project.html"><a href="r-project.html#create-a-new-r-project"><i class="fa fa-check"></i><b>5.1</b> Create a New R Project</a></li>
+<li class="chapter" data-level="5.2" data-path="r-project.html"><a href="r-project.html#navigate-between-packages"><i class="fa fa-check"></i><b>5.2</b> Navigate Between Packages</a></li>
+<li class="chapter" data-level="5.3" data-path="r-project.html"><a href="r-project.html#recommended-workflow"><i class="fa fa-check"></i><b>5.3</b> Recommended Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>6</b> Version Control</a><ul>
+<li class="chapter" data-level="6.1" data-path="version-control.html"><a href="version-control.html#git-resources"><i class="fa fa-check"></i><b>6.1</b> Git Resources</a></li>
+<li class="chapter" data-level="6.2" data-path="version-control.html"><a href="version-control.html#link-r-studio-to-github-repository"><i class="fa fa-check"></i><b>6.2</b> Link R Studio to GitHub Repository</a></li>
+<li class="chapter" data-level="6.3" data-path="version-control.html"><a href="version-control.html#push-and-pull-repository-changes-in-r-studio"><i class="fa fa-check"></i><b>6.3</b> Push and Pull Repository Changes in R Studio</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="version-control.html"><a href="version-control.html#pull"><i class="fa fa-check"></i><b>6.3.1</b> Pull</a></li>
+<li class="chapter" data-level="6.3.2" data-path="version-control.html"><a href="version-control.html#commit"><i class="fa fa-check"></i><b>6.3.2</b> Commit</a></li>
+<li class="chapter" data-level="6.3.3" data-path="version-control.html"><a href="version-control.html#push"><i class="fa fa-check"></i><b>6.3.3</b> Push</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="version-control.html"><a href="version-control.html#repository-branch"><i class="fa fa-check"></i><b>6.4</b> Repository Branch</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="version-control.html"><a href="version-control.html#create-a-new-branch"><i class="fa fa-check"></i><b>6.4.1</b> Create a New Branch</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="version-control.html"><a href="version-control.html#merge-branches"><i class="fa fa-check"></i><b>6.5</b> Merge Branches</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>7</b> R Markdown</a><ul>
+<li class="chapter" data-level="7.1" data-path="r-markdown.html"><a href="r-markdown.html#benefits"><i class="fa fa-check"></i><b>7.1</b> Benefits</a></li>
+<li class="chapter" data-level="7.2" data-path="r-markdown.html"><a href="r-markdown.html#basic-overview"><i class="fa fa-check"></i><b>7.2</b> Basic Overview</a></li>
+<li class="chapter" data-level="7.3" data-path="r-markdown.html"><a href="r-markdown.html#create-a-new-document"><i class="fa fa-check"></i><b>7.3</b> Create a New Document</a></li>
+<li class="chapter" data-level="7.4" data-path="r-markdown.html"><a href="r-markdown.html#editing"><i class="fa fa-check"></i><b>7.4</b> Editing</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="r-markdown.html"><a href="r-markdown.html#yaml-header"><i class="fa fa-check"></i><b>7.4.1</b> YAML Header</a></li>
+<li class="chapter" data-level="7.4.2" data-path="r-markdown.html"><a href="r-markdown.html#heading-text"><i class="fa fa-check"></i><b>7.4.2</b> Heading Text</a></li>
+<li class="chapter" data-level="7.4.3" data-path="r-markdown.html"><a href="r-markdown.html#plain-text"><i class="fa fa-check"></i><b>7.4.3</b> Plain Text</a></li>
+<li class="chapter" data-level="7.4.4" data-path="r-markdown.html"><a href="r-markdown.html#insert-code-chunks"><i class="fa fa-check"></i><b>7.4.4</b> Insert Code Chunks</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="r-markdown.html"><a href="r-markdown.html#compile-the-document"><i class="fa fa-check"></i><b>7.5</b> Compile the Document</a></li>
+<li class="chapter" data-level="7.6" data-path="r-markdown.html"><a href="r-markdown.html#file-management"><i class="fa fa-check"></i><b>7.6</b> File Management</a></li>
+<li class="chapter" data-level="7.7" data-path="r-markdown.html"><a href="r-markdown.html#child-documents"><i class="fa fa-check"></i><b>7.7</b> Child Documents</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="r-markdown.html"><a href="r-markdown.html#extract-and-run-r-code-from-r-markdown-files"><i class="fa fa-check"></i><b>7.7.1</b> Extract and Run R-Code from R Markdown Files</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="r-markdown.html"><a href="r-markdown.html#parameterized-reports"><i class="fa fa-check"></i><b>7.8</b> Parameterized Reports</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="base-r.html"><a href="base-r.html"><i class="fa fa-check"></i><b>8</b> Base R</a><ul>
+<li class="chapter" data-level="8.1" data-path="base-r.html"><a href="base-r.html#data-types"><i class="fa fa-check"></i><b>8.1</b> Data Types</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="base-r.html"><a href="base-r.html#numeric-double"><i class="fa fa-check"></i><b>8.1.1</b> Numeric (Double)</a></li>
+<li class="chapter" data-level="8.1.2" data-path="base-r.html"><a href="base-r.html#integer"><i class="fa fa-check"></i><b>8.1.2</b> Integer</a></li>
+<li class="chapter" data-level="8.1.3" data-path="base-r.html"><a href="base-r.html#logical"><i class="fa fa-check"></i><b>8.1.3</b> Logical</a></li>
+<li class="chapter" data-level="8.1.4" data-path="base-r.html"><a href="base-r.html#character"><i class="fa fa-check"></i><b>8.1.4</b> Character</a></li>
+<li class="chapter" data-level="8.1.5" data-path="base-r.html"><a href="base-r.html#factor"><i class="fa fa-check"></i><b>8.1.5</b> Factor</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data Structures</a><ul>
+<li class="chapter" data-level="9.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>9.1</b> Vectors</a></li>
+<li class="chapter" data-level="9.2" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>9.2</b> Matrices</a></li>
+<li class="chapter" data-level="9.3" data-path="data-structures.html"><a href="data-structures.html#arrays"><i class="fa fa-check"></i><b>9.3</b> Arrays</a></li>
+<li class="chapter" data-level="9.4" data-path="data-structures.html"><a href="data-structures.html#data-frames"><i class="fa fa-check"></i><b>9.4</b> Data Frames</a></li>
+<li class="chapter" data-level="9.5" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>9.5</b> Lists</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html"><i class="fa fa-check"></i><b>10</b> Data Structure Manipulation</a><ul>
+<li class="chapter" data-level="10.1" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#assignment-opperator--"><i class="fa fa-check"></i><b>10.1</b> Assignment Opperator (<code>&lt;-</code>)</a></li>
+<li class="chapter" data-level="10.2" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#manipulting-vectors"><i class="fa fa-check"></i><b>10.2</b> Manipulting Vectors</a></li>
+<li class="chapter" data-level="10.3" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#manipulating-data-frames"><i class="fa fa-check"></i><b>10.3</b> Manipulating Data Frames</a></li>
+<li class="chapter" data-level="10.4" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#importing-data"><i class="fa fa-check"></i><b>10.4</b> Importing Data</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#file_path"><i class="fa fa-check"></i><b>10.4.1</b> file_path</a></li>
+<li class="chapter" data-level="10.4.2" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#read.csv"><i class="fa fa-check"></i><b>10.4.2</b> read.csv</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i><b>11</b> Style Guide</a><ul>
+<li class="chapter" data-level="11.1" data-path="style-guide.html"><a href="style-guide.html#names"><i class="fa fa-check"></i><b>11.1</b> Names</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="style-guide.html"><a href="style-guide.html#object-names-discriptive-suffix"><i class="fa fa-check"></i><b>11.1.1</b> Object Names: Discriptive Suffix</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="style-guide.html"><a href="style-guide.html#spacing-and-indenting"><i class="fa fa-check"></i><b>11.2</b> Spacing and Indenting</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>12</b> Writing Functions</a></li>
+<li class="chapter" data-level="13" data-path="loops.html"><a href="loops.html"><i class="fa fa-check"></i><b>13</b> Loops</a><ul>
+<li class="chapter" data-level="13.1" data-path="loops.html"><a href="loops.html#for-loop"><i class="fa fa-check"></i><b>13.1</b> for loop</a></li>
+<li class="chapter" data-level="13.2" data-path="loops.html"><a href="loops.html#apply-family"><i class="fa fa-check"></i><b>13.2</b> apply family</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="loops.html"><a href="loops.html#apply"><i class="fa fa-check"></i><b>13.2.1</b> apply</a></li>
+<li class="chapter" data-level="13.2.2" data-path="loops.html"><a href="loops.html#lapply"><i class="fa fa-check"></i><b>13.2.2</b> lapply</a></li>
+<li class="chapter" data-level="13.2.3" data-path="loops.html"><a href="loops.html#sapply"><i class="fa fa-check"></i><b>13.2.3</b> sapply</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>14</b> Tidyverse</a><ul>
+<li class="chapter" data-level="14.1" data-path="tidyverse.html"><a href="tidyverse.html#tidyverse-directory"><i class="fa fa-check"></i><b>14.1</b> Tidyverse Directory</a></li>
+<li class="chapter" data-level="14.2" data-path="tidyverse.html"><a href="tidyverse.html#magrittr"><i class="fa fa-check"></i><b>14.2</b> magrittr</a><ul>
+<li class="chapter" data-level="14.2.1" data-path="tidyverse.html"><a href="tidyverse.html#example-data"><i class="fa fa-check"></i><b>14.2.1</b> Example Data</a></li>
+<li class="chapter" data-level="14.2.2" data-path="tidyverse.html"><a href="tidyverse.html#pipe-operator"><i class="fa fa-check"></i><b>14.2.2</b> Pipe Operator (%&gt;%)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="dplyr.html"><a href="dplyr.html"><i class="fa fa-check"></i><b>15</b> dplyr</a><ul>
+<li class="chapter" data-level="15.0.1" data-path="dplyr.html"><a href="dplyr.html#example-data-1"><i class="fa fa-check"></i><b>15.0.1</b> Example Data</a></li>
+<li class="chapter" data-level="15.0.2" data-path="dplyr.html"><a href="dplyr.html#rename"><i class="fa fa-check"></i><b>15.0.2</b> Rename</a></li>
+<li class="chapter" data-level="15.0.3" data-path="dplyr.html"><a href="dplyr.html#filter"><i class="fa fa-check"></i><b>15.0.3</b> Filter</a></li>
+<li class="chapter" data-level="15.0.4" data-path="dplyr.html"><a href="dplyr.html#select"><i class="fa fa-check"></i><b>15.0.4</b> Select</a></li>
+<li class="chapter" data-level="15.0.5" data-path="dplyr.html"><a href="dplyr.html#distinct"><i class="fa fa-check"></i><b>15.0.5</b> distinct</a></li>
+<li class="chapter" data-level="15.0.6" data-path="dplyr.html"><a href="dplyr.html#mutate"><i class="fa fa-check"></i><b>15.0.6</b> mutate</a></li>
+<li class="chapter" data-level="15.0.7" data-path="dplyr.html"><a href="dplyr.html#group_by"><i class="fa fa-check"></i><b>15.0.7</b> group_by</a></li>
+<li class="chapter" data-level="15.0.8" data-path="dplyr.html"><a href="dplyr.html#summarize"><i class="fa fa-check"></i><b>15.0.8</b> summarize</a></li>
+<li class="chapter" data-level="15.0.9" data-path="dplyr.html"><a href="dplyr.html#joins"><i class="fa fa-check"></i><b>15.0.9</b> Joins</a></li>
+<li class="chapter" data-level="15.0.10" data-path="dplyr.html"><a href="dplyr.html#bind"><i class="fa fa-check"></i><b>15.0.10</b> Bind</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="tidyr.html"><a href="tidyr.html"><i class="fa fa-check"></i><b>16</b> tidyr</a><ul>
+<li class="chapter" data-level="16.0.1" data-path="tidyr.html"><a href="tidyr.html#example-data-2"><i class="fa fa-check"></i><b>16.0.1</b> Example Data</a></li>
+<li class="chapter" data-level="16.0.2" data-path="tidyr.html"><a href="tidyr.html#spread"><i class="fa fa-check"></i><b>16.0.2</b> spread</a></li>
+<li class="chapter" data-level="16.0.3" data-path="tidyr.html"><a href="tidyr.html#gather"><i class="fa fa-check"></i><b>16.0.3</b> gather</a></li>
+<li class="chapter" data-level="16.0.4" data-path="tidyr.html"><a href="tidyr.html#complete"><i class="fa fa-check"></i><b>16.0.4</b> complete</a></li>
+<li class="chapter" data-level="16.0.5" data-path="tidyr.html"><a href="tidyr.html#separate"><i class="fa fa-check"></i><b>16.0.5</b> separate</a></li>
+<li class="chapter" data-level="16.0.6" data-path="tidyr.html"><a href="tidyr.html#unite"><i class="fa fa-check"></i><b>16.0.6</b> unite</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="lubridate.html"><a href="lubridate.html"><i class="fa fa-check"></i><b>17</b> lubridate</a><ul>
+<li class="chapter" data-level="17.0.1" data-path="lubridate.html"><a href="lubridate.html#example-data-3"><i class="fa fa-check"></i><b>17.0.1</b> Example Data</a></li>
+<li class="chapter" data-level="17.0.2" data-path="lubridate.html"><a href="lubridate.html#mdy-ymd-dmy-ymd_hms"><i class="fa fa-check"></i><b>17.0.2</b> mdy, ymd, dmy, ymd_hms, …</a></li>
+<li class="chapter" data-level="17.0.3" data-path="lubridate.html"><a href="lubridate.html#year-month-mday-yday-hour-minute-and-second"><i class="fa fa-check"></i><b>17.0.3</b> year, month, mday, yday, hour, minute, and second</a></li>
+<li class="chapter" data-level="17.0.4" data-path="lubridate.html"><a href="lubridate.html#round_date-floor_date-and-ceiling_date"><i class="fa fa-check"></i><b>17.0.4</b> round_date, floor_date, and ceiling_date</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>18</b> ggplot2</a><ul>
+<li class="chapter" data-level="18.0.1" data-path="ggplot2.html"><a href="ggplot2.html#example-data-4"><i class="fa fa-check"></i><b>18.0.1</b> Example Data</a></li>
+<li class="chapter" data-level="18.0.2" data-path="ggplot2.html"><a href="ggplot2.html#ggplot"><i class="fa fa-check"></i><b>18.0.2</b> ggplot</a></li>
+<li class="chapter" data-level="18.0.3" data-path="ggplot2.html"><a href="ggplot2.html#aes"><i class="fa fa-check"></i><b>18.0.3</b> aes</a></li>
+<li class="chapter" data-level="18.0.4" data-path="ggplot2.html"><a href="ggplot2.html#geom_boxplot"><i class="fa fa-check"></i><b>18.0.4</b> geom_boxplot</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>19</b> Shiny</a><ul>
+<li class="chapter" data-level="19.1" data-path="shiny.html"><a href="shiny.html#what-is-shiny"><i class="fa fa-check"></i><b>19.1</b> What is Shiny?</a></li>
+<li class="chapter" data-level="19.2" data-path="shiny.html"><a href="shiny.html#resources"><i class="fa fa-check"></i><b>19.2</b> Resources</a></li>
+<li class="chapter" data-level="19.3" data-path="shiny.html"><a href="shiny.html#project-composition"><i class="fa fa-check"></i><b>19.3</b> Project Composition</a><ul>
+<li class="chapter" data-level="19.3.1" data-path="shiny.html"><a href="shiny.html#ui.r"><i class="fa fa-check"></i><b>19.3.1</b> ui.R</a></li>
+<li class="chapter" data-level="19.3.2" data-path="shiny.html"><a href="shiny.html#server.r"><i class="fa fa-check"></i><b>19.3.2</b> server.R</a></li>
+<li class="chapter" data-level="19.3.3" data-path="shiny.html"><a href="shiny.html#global.r"><i class="fa fa-check"></i><b>19.3.3</b> global.R</a></li>
+<li class="chapter" data-level="19.3.4" data-path="shiny.html"><a href="shiny.html#structure"><i class="fa fa-check"></i><b>19.3.4</b> Structure</a></li>
+<li class="chapter" data-level="19.3.5" data-path="shiny.html"><a href="shiny.html#r-packages-2"><i class="fa fa-check"></i><b>19.3.5</b> R-Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="19.4" data-path="shiny.html"><a href="shiny.html#helpful-r-packages"><i class="fa fa-check"></i><b>19.4</b> Helpful R-Packages</a><ul>
+<li class="chapter" data-level="19.4.1" data-path="shiny.html"><a href="shiny.html#dt-interactive-tables"><i class="fa fa-check"></i><b>19.4.1</b> DT (Interactive Tables)</a></li>
+<li class="chapter" data-level="19.4.2" data-path="shiny.html"><a href="shiny.html#dygraphs-interactive-time-series-plots"><i class="fa fa-check"></i><b>19.4.2</b> dygraphs (Interactive Time Series Plots)</a></li>
+<li class="chapter" data-level="19.4.3" data-path="shiny.html"><a href="shiny.html#leaflet-interactive-maps"><i class="fa fa-check"></i><b>19.4.3</b> leaflet (Interactive Maps)</a></li>
+<li class="chapter" data-level="19.4.4" data-path="shiny.html"><a href="shiny.html#plotly-interactive-figures"><i class="fa fa-check"></i><b>19.4.4</b> plotly (Interactive Figures)</a></li>
+</ul></li>
+<li class="chapter" data-level="19.5" data-path="shiny.html"><a href="shiny.html#publishing"><i class="fa fa-check"></i><b>19.5</b> Publishing</a><ul>
+<li class="chapter" data-level="19.5.1" data-path="shiny.html"><a href="shiny.html#how-to-publish-to-shinyapps.io"><i class="fa fa-check"></i><b>19.5.1</b> How to Publish to shinyapps.io</a></li>
+</ul></li>
+<li class="chapter" data-level="19.6" data-path="shiny.html"><a href="shiny.html#data-management"><i class="fa fa-check"></i><b>19.6</b> Data Management</a><ul>
+<li class="chapter" data-level="19.6.1" data-path="shiny.html"><a href="shiny.html#small-data-sets"><i class="fa fa-check"></i><b>19.6.1</b> Small Data Sets</a></li>
+<li class="chapter" data-level="19.6.2" data-path="shiny.html"><a href="shiny.html#large-data-sets"><i class="fa fa-check"></i><b>19.6.2</b> Large Data Sets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="default-shiny-example.html"><a href="default-shiny-example.html"><i class="fa fa-check"></i><b>20</b> Default Shiny Example</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R in Practice</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ggplot2" class="section level1">
+<h1><span class="header-section-number">18</span> ggplot2</h1>
+<center>
+<img src="images/hex_symbols/ggplot2.png" width="200" />
+</center>
+<ul>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/" class="uri">https://ggplot2.tidyverse.org/</a></li>
+<li><strong>Index of Functions:</strong> <a href="https://ggplot2.tidyverse.org/reference/index.html" class="uri">https://ggplot2.tidyverse.org/reference/index.html</a></li>
+<li><strong>Cheat Sheet:</strong> <a href="https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf</a></li>
+<li><strong>Chapter of R for Data Science:</strong>
+<ul>
+<li><a href="https://r4ds.had.co.nz/data-visualisation.html" class="uri">https://r4ds.had.co.nz/data-visualisation.html</a></li>
+<li><a href="https://r4ds.had.co.nz/graphics-for-communication.html" class="uri">https://r4ds.had.co.nz/graphics-for-communication.html</a></li>
+</ul></li>
+<li><strong>R Graphics Cookbook:</strong> <a href="http://www.cookbook-r.com/Graphs/" class="uri">http://www.cookbook-r.com/Graphs/</a></li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+
+<span class="kw">suppressPackageStartupMessages</span>(
+ <span class="kw">library</span>(dplyr) 
+)
+
+<span class="kw">library</span>(tidyr)</code></pre>
+<div id="example-data-4" class="section level3">
+<h3><span class="header-section-number">18.0.1</span> Example Data</h3>
+<p>Import the example data. This data represents benthic macroinvertebrate data collected in the littoral zone of Onondaga, Otisco, and Cazenovia lakes.</p>
+<pre class="sourceCode r"><code class="sourceCode r">taxa.df &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="st">&quot;data&quot;</span>,
+          <span class="st">&quot;zms_thesis-macro_2017-06-18.csv&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">read.csv</span>(<span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</code></pre>
+<p>Preprocess <code>taxa.df</code> to just represent order-level taxonomic counts per sample. For more details about this process see the <a href="dplyr.html#summarize">summarize</a> section.</p>
+<pre class="sourceCode r"><code class="sourceCode r">ord.df &lt;-<span class="st"> </span>taxa.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(unique_id, station_id, lake, order, count) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(unique_id, station_id, lake, order) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">count =</span> <span class="kw">sum</span>(count)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(station_id, lake, order) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">summarize</span>(<span class="dt">count =</span> <span class="kw">mean</span>(count)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ungroup</span>()
+
+DT<span class="op">::</span><span class="kw">datatable</span>(ord.df, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">columnDefs =</span> <span class="kw">list</span>(<span class="kw">list</span>(<span class="dt">className =</span> <span class="st">&#39;dt-center&#39;</span>, <span class="dt">targets =</span> <span class="dv">0</span><span class="op">:</span><span class="dv">3</span>))))</code></pre>
+<div id="htmlwidget-5fd058c48bb47cf5c44e" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5fd058c48bb47cf5c44e">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160","161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180","181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199","200","201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220","221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240","241","242","243","244","245","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260","261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280","281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300","301","302","303","304","305","306","307","308","309","310","311","312","313","314","315","316","317","318","319","320","321","322","323","324","325","326","327","328","329","330","331","332","333","334","335","336","337","338","339","340","341","342","343","344","345","346","347","348","349","350","351","352","353","354"],["caz_1","caz_1","caz_1","caz_1","caz_1","caz_1","caz_1","caz_1","caz_1","caz_1","caz_10","caz_10","caz_10","caz_10","caz_10","caz_10","caz_10","caz_10","caz_10","caz_10","caz_10","caz_10","caz_11","caz_11","caz_11","caz_11","caz_11","caz_11","caz_11","caz_11","caz_11","caz_11","caz_11","caz_11","caz_12","caz_12","caz_12","caz_12","caz_12","caz_12","caz_12","caz_12","caz_12","caz_12","caz_12","caz_13","caz_13","caz_13","caz_13","caz_13","caz_13","caz_13","caz_13","caz_13","caz_13","caz_13","caz_14","caz_14","caz_14","caz_14","caz_14","caz_14","caz_14","caz_14","caz_15","caz_15","caz_15","caz_15","caz_15","caz_15","caz_15","caz_15","caz_15","caz_15","caz_16","caz_16","caz_16","caz_16","caz_16","caz_16","caz_16","caz_16","caz_16","caz_2","caz_2","caz_2","caz_2","caz_2","caz_2","caz_2","caz_2","caz_2","caz_2","caz_2","caz_3","caz_3","caz_3","caz_3","caz_3","caz_3","caz_3","caz_3","caz_3","caz_4","caz_4","caz_4","caz_4","caz_4","caz_4","caz_4","caz_4","caz_4","caz_5","caz_5","caz_5","caz_5","caz_5","caz_5","caz_5","caz_5","caz_5","caz_5","caz_5","caz_5","caz_6","caz_6","caz_6","caz_6","caz_6","caz_6","caz_6","caz_7","caz_7","caz_7","caz_7","caz_7","caz_7","caz_7","caz_7","caz_7","caz_7","caz_8","caz_8","caz_8","caz_8","caz_8","caz_8","caz_8","caz_8","caz_8","caz_8","caz_8","caz_8","caz_9","caz_9","caz_9","caz_9","caz_9","caz_9","caz_9","caz_9","caz_9","onon_1","onon_1","onon_1","onon_10","onon_10","onon_10","onon_11","onon_11","onon_11","onon_11","onon_11","onon_12","onon_12","onon_12","onon_12","onon_13","onon_13","onon_13","onon_13","onon_13","onon_14","onon_14","onon_14","onon_14","onon_15","onon_15","onon_15","onon_15","onon_15","onon_15","onon_15","onon_16","onon_16","onon_16","onon_16","onon_16","onon_2","onon_2","onon_2","onon_2","onon_2","onon_3","onon_3","onon_3","onon_3","onon_3","onon_3","onon_3","onon_3","onon_4","onon_4","onon_4","onon_4","onon_4","onon_4","onon_5","onon_5","onon_5","onon_5","onon_5","onon_6","onon_6","onon_6","onon_6","onon_6","onon_6","onon_7","onon_7","onon_7","onon_7","onon_7","onon_7","onon_8","onon_8","onon_8","onon_8","onon_8","onon_8","onon_8","onon_9","onon_9","ot_1","ot_1","ot_1","ot_1","ot_1","ot_1","ot_1","ot_1","ot_1","ot_10","ot_10","ot_10","ot_10","ot_10","ot_10","ot_10","ot_10","ot_11","ot_11","ot_11","ot_11","ot_11","ot_11","ot_11","ot_12","ot_12","ot_12","ot_12","ot_12","ot_12","ot_13","ot_13","ot_13","ot_13","ot_13","ot_13","ot_14","ot_14","ot_14","ot_14","ot_14","ot_14","ot_14","ot_14","ot_15","ot_15","ot_15","ot_15","ot_15","ot_15","ot_15","ot_16","ot_16","ot_16","ot_16","ot_16","ot_16","ot_16","ot_2","ot_2","ot_3","ot_3","ot_3","ot_3","ot_3","ot_3","ot_3","ot_3","ot_4","ot_4","ot_4","ot_4","ot_4","ot_4","ot_4","ot_4","ot_4","ot_4","ot_5","ot_5","ot_5","ot_5","ot_5","ot_5","ot_5","ot_5","ot_6","ot_6","ot_6","ot_6","ot_6","ot_7","ot_7","ot_7","ot_7","ot_7","ot_7","ot_8","ot_8","ot_8","ot_8","ot_8","ot_8","ot_8","ot_8","ot_8","ot_9","ot_9","ot_9","ot_9","ot_9"],["caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot"],["amphipoda","basommatophora","diptera","ephemeroptera","heterostropha","isopoda","lepidoptera","neotaenioglossa","odonata","trichoptera","amphipoda","basommatophora","coleoptera","decapoda","diptera","ephemeroptera","heterostropha","isopoda","neotaenioglossa","odonata","trichoptera","veneroida","amphipoda","architaenioglossa","basommatophora","coleoptera","diptera","ephemeroptera","heterostropha","isopoda","megaloptera","neotaenioglossa","trichoptera","veneroida","amphipoda","architaenioglossa","basommatophora","decapoda","diptera","isopoda","lepidoptera","megaloptera","neotaenioglossa","trichoptera","veneroida","amphipoda","architaenioglossa","basommatophora","coleoptera","decapoda","diptera","ephemeroptera","isopoda","megaloptera","trichoptera","veneroida","amphipoda","basommatophora","coleoptera","decapoda","diptera","ephemeroptera","trichoptera","veneroida","amphipoda","basommatophora","decapoda","diptera","ephemeroptera","heterostropha","isopoda","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","diptera","ephemeroptera","heterostropha","isopoda","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","diptera","ephemeroptera","heterostropha","isopoda","lepidoptera","megaloptera","odonata","trichoptera","veneroida","amphipoda","basommatophora","decapoda","diptera","ephemeroptera","isopoda","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","coleoptera","decapoda","diptera","ephemeroptera","isopoda","trichoptera","veneroida","amphipoda","architaenioglossa","basommatophora","coleoptera","decapoda","diptera","ephemeroptera","lepidoptera","megaloptera","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","diptera","isopoda","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","coleoptera","diptera","ephemeroptera","isopoda","megaloptera","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","coleoptera","decapoda","diptera","ephemeroptera","heterostropha","isopoda","megaloptera","neotaenioglossa","trichoptera","veneroida","amphipoda","architaenioglossa","basommatophora","coleoptera","diptera","heterostropha","neotaenioglossa","trichoptera","veneroida","diptera","heterostropha","veneroida","amphipoda","diptera","veneroida","amphipoda","basommatophora","diptera","lepidoptera","veneroida","amphipoda","diptera","trichoptera","veneroida","amphipoda","diptera","heterostropha","trichoptera","veneroida","amphipoda","diptera","heterostropha","trichoptera","amphipoda","basommatophora","coleoptera","diptera","ephemeroptera","trichoptera","veneroida","amphipoda","diptera","isopoda","trichoptera","veneroida","amphipoda","diptera","isopoda","trichoptera","veneroida","amphipoda","basommatophora","diptera","heterostropha","lepidoptera","neotaenioglossa","trichoptera","veneroida","amphipoda","diptera","isopoda","odonata","trichoptera","veneroida","amphipoda","basommatophora","diptera","neotaenioglossa","veneroida","amphipoda","basommatophora","diptera","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","diptera","odonata","trichoptera","veneroida","amphipoda","basommatophora","diptera","lepidoptera","neotaenioglossa","trichoptera","veneroida","amphipoda","diptera","amphipoda","basommatophora","diptera","ephemeroptera","heterostropha","isopoda","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","coleoptera","diptera","ephemeroptera","isopoda","trichoptera","veneroida","amphipoda","basommatophora","diptera","ephemeroptera","megaloptera","trichoptera","veneroida","amphipoda","basommatophora","diptera","ephemeroptera","trichoptera","veneroida","amphipoda","decapoda","diptera","ephemeroptera","trichoptera","veneroida","amphipoda","basommatophora","decapoda","diptera","ephemeroptera","isopoda","trichoptera","veneroida","amphipoda","basommatophora","diptera","ephemeroptera","heterostropha","trichoptera","veneroida","amphipoda","basommatophora","diptera","ephemeroptera","isopoda","trichoptera","veneroida","diptera","veneroida","amphipoda","coleoptera","decapoda","diptera","heterostropha","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","coleoptera","diptera","ephemeroptera","heterostropha","isopoda","neotaenioglossa","trichoptera","veneroida","amphipoda","basommatophora","decapoda","diptera","heterostropha","neotaenioglossa","trichoptera","veneroida","amphipoda","diptera","ephemeroptera","trichoptera","veneroida","amphipoda","basommatophora","diptera","isopoda","trichoptera","veneroida","amphipoda","basommatophora","coleoptera","decapoda","diptera","ephemeroptera","isopoda","odonata","trichoptera","amphipoda","basommatophora","diptera","trichoptera","veneroida"],[15,18.5,51.5,9.5,1,5.5,1,2,1,3,42,9,1.5,1,48.5,5.5,1,13.5,3,1,6.5,5.5,10.5,3,2,2,79.5,1,3,4,1,1,6.5,6,19,1.5,2.5,1,68.5,1,2,2,2,3.5,5.5,21,1,3,1.5,1,79.5,1,2.5,1,4.5,4.5,9,5.5,1,1,64,2,2,17,7,3,1,93.5,2.5,2,2.5,3,6.5,2.5,32.5,1,49,9,3,15.5,2,6,11,37.5,10,124,2,4,10,1,1,1,6.5,9.5,36.5,2,1,57.5,3,3,1.5,5.5,1.5,74.5,3.5,1.5,1,71.5,17,4.5,3.5,5,23.5,1,4,1,2,78.5,4,1,1.5,2,2.5,1.5,64,4.5,76,2.5,1,1.5,2,35.5,5.5,1,65,3,1,2,2.5,1.5,3,37,9,1,3,55,1,1.5,3.5,5,4,6,9.5,4.5,2,7,1,61.5,1,5,5,9,81.5,1,1,18,86.5,1,40,1,24,1,59.5,1,107,1,1,2,112.5,1,1,2.5,5,101,1,1,27.5,2.5,1,77,4,3,2.5,9,82,1,1.5,1.5,17,57.5,19,3.5,37.5,34.5,1,57,1,1,4,3,38.5,22,25.5,1,2,4.5,53,76.5,3,11.5,4,16,109,2,21.5,3,4.5,13,68,2,20.5,1,2,11,61.5,2,17.5,1,1,3.5,9,1.5,14.5,34,22.5,31.5,4.5,1,1,1,10.5,10,35,1,1,46.5,2,14,3.5,9,79,1,37.5,8,1.5,5,9.5,52,2,27.5,15,4,33.5,15,3,10.5,13,1,137.5,48.5,3,1,36,5.5,2,3,2,25,4,13.5,3,1,8,68.5,83,3,17.5,1,3,2,4.5,80,31.5,15.5,1,1,63,2,13,1,10.5,110,2,1,10,2,1,18.5,3,1,8.5,51,2,1,43,1,6,3,5,55.5,56.5,5.5,4,43.5,43.5,2,58.5,7,1.5,23,61.5,3.5,1,5,86.5,2.5,5,1,11,2.5,1,73,1,1.5]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>station_id<\/th>\n      <th>lake<\/th>\n      <th>order<\/th>\n      <th>count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-center","targets":[0,1,2,3]},{"className":"dt-right","targets":4},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p>Calculate the calculate relative abundance (i.e., the percentage of the sample represented by each taxon) of each taxon within a sample. For more details about this process see the <a href="dplyr.html#group_by">group_by</a> section.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df &lt;-<span class="st"> </span>ord.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(station_id) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">total =</span> <span class="kw">sum</span>(count),
+         <span class="dt">percent =</span> count <span class="op">/</span><span class="st"> </span>total <span class="op">*</span><span class="st"> </span><span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>tidyr<span class="op">::</span><span class="kw">complete</span>(order,
+                  <span class="kw">nesting</span>(station_id, lake, total),
+                  <span class="dt">fill =</span> <span class="kw">list</span>(<span class="dt">count =</span> <span class="dv">0</span>, <span class="dt">percent =</span> <span class="dv">0</span>)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">lake =</span> <span class="kw">factor</span>(lake, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;onon&quot;</span>, <span class="st">&quot;ot&quot;</span>, <span class="st">&quot;caz&quot;</span>)))</code></pre>
+</div>
+<div id="ggplot" class="section level3">
+<h3><span class="header-section-number">18.0.2</span> ggplot</h3>
+<ul>
+<li><strong>Definition:</strong> “initializes a ggplot object.” (quote from link below)</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="uri">https://ggplot2.tidyverse.org/reference/ggplot.html</a></li>
+</ul>
+<p>Generally, you want to start with a <code>ggplot()</code> call. Here we can see a blank figure template returned when <code>ggplot()</code> is called and <code>pct.df</code> is specified as data. The pipe operator can be used to pipe data into <code>ggplot()</code> but it cannot be used to chain subsequent <strong>ggplot2</strong> functions together.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(pct.df)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-128-1.png" width="672" /></p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-128-2.png" width="672" /></p>
+</div>
+<div id="aes" class="section level3">
+<h3><span class="header-section-number">18.0.3</span> aes</h3>
+<ul>
+<li><strong>Definition:</strong> specify aesthetics (x-axis, y-axis, color, fill, shape, size, linetype, etc.)</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/aes.html" class="uri">https://ggplot2.tidyverse.org/reference/aes.html</a></li>
+</ul>
+<p>To start to format the figure, you will want to use <code>aes()</code>. When using <code>aes()</code> within <code>ggplot()</code>, you are specifying global variables. For instance, you will generally specify the columns, from the specified data frame (e.g., <code>pct.df</code>), that will represent your x-axis and y-axis. In the example below, the <code>lake</code> column represents the x-axis, while the <code>percent</code> column will represents the y-axis. Now we have a template for our figure but we will want to add layers (boxplot, scatter plot, bar plot) to this feature to visualize our data.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent))</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-129-1.png" width="672" />
+### Adding Layers (<code>+</code>)</p>
+<p><strong>ggplot2</strong> does not recognize the pipe operator (<code>%&gt;%</code>), instead it uses <code>+</code> to add components to a plot.</p>
+<p>Now let’s add data to the plot by adding a <code>+</code> at the end of <code>ggplot()</code> and then specifying the plot type we are interested in creating. All plot functions in <strong>ggplot2</strong> start with the prefix “geom_”.</p>
+</div>
+<div id="geom_boxplot" class="section level3">
+<h3><span class="header-section-number">18.0.4</span> geom_boxplot</h3>
+<ul>
+<li><strong>Definition:</strong> create box and whisker plots</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_boxplot.html</a></li>
+</ul>
+<p>Here we will create a box and whisker plot using <code>geom_boxplot()</code>. For this example, we will only focus on the percentage of Ephemeroptera (Mayflies) found within each lake by using the <code>filter()</code> function before the <code>ggplot()</code> function. The aesthetics have been specified within <code>ggplot()</code>, therefore <code>geom_boxplot()</code> can be called without any arguments.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-130-1.png" width="672" /></p>
+<div id="fill" class="section level4">
+<h4><span class="header-section-number">18.0.4.1</span> Fill</h4>
+<p>The color of the interquartile boxes can be specified with <code>fill</code>. In this example, <code>fill = lake</code>, which <strong>ggplot2</strong> will automatically realize represents three categories and use a default color palette that is used to automatically color the plot.
+<code>fill</code> is specified within <code>aes()</code> within the <code>ggplot()</code> , and therefore this specification carries through to the subsequent <code>geom_boxplot()</code> call.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
+</div>
+<div id="color" class="section level4">
+<h4><span class="header-section-number">18.0.4.2</span> Color</h4>
+<p>Color can be sepecified in a similar manner to <a href="ggplot2.html#fill">Fill</a>. In the plot below, we can see the difference between color and fill (the previous plot).</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent, <span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-132-1.png" width="672" /></p>
+<p>When I first started using <strong>ggplot2</strong>, I would frequently try to put the color or other aesthetic arguments outside of the <code>aes()</code> call. For example, in <code>ggplot(aes(x = lake, y = percent), color = lake)</code>, <code>color = lake</code> is not within the <code>aes()</code> call. Therefore, it has no effect on the plot (i.e., there is no color added to the plot).</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent), <span class="dt">color =</span> lake) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-133-1.png" width="672" /></p>
+<p><code>aes()</code> and the color or other aesthetics can also be specified within the <code>geom_boxplot()</code> call. This allows you to be more specific of which feature you want to recieve a given aesthetic.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake))</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-134-1.png" width="672" /></p>
+<p>Additionally, if you want to specify specific colors not based on features from your data frame (e.g., <code>lake</code>), then you can specify these colors within the <code>geom_boxplot()</code> call. Note, that <code>color</code> is <strong>NOT</strong> specified within an <code>aes()</code> call.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="kw">c</span>(<span class="st">&quot;purple&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;brown&quot;</span>))</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-135-1.png" width="672" /></p>
+<p>If you do attempt to wrap manually specified colors, like <code>color = c("purple", "orange", "brown")</code>, within <code>aes()</code>, you will get an error.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(<span class="dt">color =</span> <span class="kw">c</span>(<span class="st">&quot;purple&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;brown&quot;</span>)))</code></pre>
+<pre><code>## Error: Aesthetics must be either length 1 or the same as the data (48): colour</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-136-1.png" width="672" /></p>
+<p>Also, trying to manually specify colors within the <code>ggplot()</code> call will have no effect on the plot.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent), <span class="dt">color =</span> <span class="kw">c</span>(<span class="st">&quot;purple&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;brown&quot;</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-137-1.png" width="672" /></p>
+</div>
+<div id="geom_point" class="section level4">
+<h4><span class="header-section-number">18.0.4.3</span> geom_point</h4>
+<ul>
+<li><strong>Definition:</strong> add points to a plot</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_point.html</a></li>
+</ul>
+<p>Let’s add another layer to the plot above. <code>geom_point()</code> can be used to vizualize where the data points actually fall relative to the box and whisker plots.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-138-1.png" width="672" /></p>
+</div>
+<div id="geom_jitter" class="section level4">
+<h4><span class="header-section-number">18.0.4.4</span> geom_jitter</h4>
+<ul>
+<li><strong>Definition:</strong> add points to a plot that have been randomly offplaced from their actual position to avoid point overlap</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_jitter.html</a></li>
+</ul>
+<p>In the <a href="ggplot2.html#geom_point">geom_point</a> plot above, it is not possible to know if a point represents a single sample or if there are more than one samples with the same value overlaid on one another. <code>geom_jitter()</code> can be used to randomly offset the points from thier actual position to avoid the overlap issue present in <code>geom_point()</code>.</p>
+<p>In this example, <code>geom_jitter()</code> is used to offest the points overlaid on the box and whisker plots. The points are colored by <code>lake</code> within this call: <code>geom_jitter(aes(color = lake))</code>. Additionally, the outliers plotted from <code>geom_boxplot()</code> are hidden with <code>geom_boxplot(outlier.shape = NA)</code>. These outliers are represented in the <code>geom_jitter()</code> call; therefore, if the outliers were not removed from <code>geom_boxplot()</code>, these points would be represented twice.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_jitter</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake))</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
+<p>Here we can see what happens if <code>color</code> is specified within the <code>ggplot()</code> call. Now the box and whisker lines and the points are colored by lake. This is in contrast to the last plot, where only the points were colored by lake.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent, <span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_jitter</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
+</div>
+<div id="geom_violin" class="section level4">
+<h4><span class="header-section-number">18.0.4.5</span> geom_violin</h4>
+<ul>
+<li><strong>Definition:</strong> create violin plots a way of visualizing point density and distribution</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/geom_violin.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_violin.html</a></li>
+</ul>
+<p>This plot helps us to see that there are a lot of samples from Onondaga Lake (“onon”) that have no Ephemeroptera (percent = 0).</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_violin</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-141-1.png" width="672" /></p>
+</div>
+<div id="geom_dotplot" class="section level4">
+<h4><span class="header-section-number">18.0.4.6</span> geom_dotplot</h4>
+<ul>
+<li><strong>Definition:</strong> create dot plots or beeswarm plots a way of visualizing point density and distribution</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_dotplot.html</a></li>
+</ul>
+<p>Similar to [violin_plots], <code>geom_dotplot()</code> can be more informative than a box and whisker plot.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_dotplot</span>(<span class="dt">binaxis =</span> <span class="st">&quot;y&quot;</span>,
+               <span class="dt">stackdir =</span> <span class="st">&quot;center&quot;</span>,
+               <span class="dt">binwidth =</span> <span class="fl">0.25</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-142-1.png" width="768" /></p>
+<p><code>geom_dotplot()</code> could be overlaid on <code>geom_boxplot()</code>, which may be a better than a <a href="ggplot2.html#geom_jitter">geom_jitter</a> example.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(order <span class="op">==</span><span class="st"> &quot;ephemeroptera&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> percent)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_dotplot</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> lake),
+               <span class="dt">binaxis =</span> <span class="st">&quot;y&quot;</span>,
+               <span class="dt">stackdir =</span> <span class="st">&quot;center&quot;</span>,
+               <span class="dt">binwidth =</span> <span class="fl">0.25</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-143-1.png" width="768" /></p>
+</div>
+<div id="geom_bar" class="section level4">
+<h4><span class="header-section-number">18.0.4.7</span> geom_bar</h4>
+<ul>
+<li><strong>Definition:</strong> create bar plots</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_bar.html</a></li>
+</ul>
+<p>For this section, the data will need to be summarized by lake. The data is aggregated by <code>lake</code> and <code>order</code>, and the median abundance (<code>count</code>) is calculated. The top five taxa observed are retained as normal but the remaining taxa are lumped and reclassified as “Other” (<code>forcats::fct_lump(factor(order), n = 5, w = percent)</code>). The taxa are then sorted in descending order based on the taxa most commonly observed (<code>forcats::fct_reorder(order, percent, median, .desc = TRUE)</code>).</p>
+<pre class="sourceCode r"><code class="sourceCode r">abund.df &lt;-<span class="st"> </span>pct.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(lake, order) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">count =</span> <span class="kw">median</span>(count)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">order =</span> forcats<span class="op">::</span><span class="kw">fct_lump</span>(<span class="kw">factor</span>(order),
+                                   <span class="dt">n =</span> <span class="dv">5</span>,
+                                   <span class="dt">w =</span> count),
+         <span class="dt">order =</span> forcats<span class="op">::</span><span class="kw">fct_reorder</span>(order, count, median, <span class="dt">.desc =</span> <span class="ot">TRUE</span>),
+         <span class="dt">lake =</span> <span class="kw">factor</span>(lake, <span class="kw">c</span>(<span class="st">&quot;onon&quot;</span>, <span class="st">&quot;ot&quot;</span>, <span class="st">&quot;caz&quot;</span>)))
+
+DT<span class="op">::</span><span class="kw">datatable</span>(abund.df, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">scrollX =</span> <span class="ot">TRUE</span>))</code></pre>
+<div id="htmlwidget-6e1d08bc2dba58f879d3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6e1d08bc2dba58f879d3">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45"],["onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","onon","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","ot","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz","caz"],["amphipoda","Other","basommatophora","Other","Other","diptera","Other","Other","Other","Other","Other","Other","Other","trichoptera","veneroida","amphipoda","Other","basommatophora","Other","Other","diptera","Other","Other","Other","Other","Other","Other","Other","trichoptera","veneroida","amphipoda","Other","basommatophora","Other","Other","diptera","Other","Other","Other","Other","Other","Other","Other","trichoptera","veneroida"],[20,0,0,0,0,57.25,0,0,0,0,0,0,0,1.25,5.75,46,0,2,0,0,40.25,2.25,0,0,0,0,0,0,3,9.75,28,0,4.25,1,1,66.75,2.25,0.5,2.75,0,0,2,0,4.75,5.25]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lake<\/th>\n      <th>order<\/th>\n      <th>count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p>Using <code>geom_bar()</code>, we can generate a bar plot. <code>state = "identity"</code> must be used when a <code>y</code> value is specified in <code>aes()</code>; otherwise, <strong>ggplot2</strong> will simiply count the number of <code>x</code> value instances to create a y-axis count.</p>
+<p><strong>WARNING:</strong> This plot is a quick example of <code>geom_bar()</code> and is not a good representation of the data. In this case, the median abundance was calculated for each taxon within each lake. <code>geom_bar()</code> is summing the median values per taxon per lake to produce this figure.</p>
+<pre class="sourceCode r"><code class="sourceCode r">abund.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> order, <span class="dt">y =</span> count)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-145-1.png" width="672" /></p>
+<p>As the warning above notes, the above plot is not a great representation of the data because it essentially sums the three median abundance values per taxon per lake to produce the bars. We can see this breakdown by adding <code>fill = TRUE</code>. This is also a poor way of view this data.</p>
+<pre class="sourceCode r"><code class="sourceCode r">abund.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> order, <span class="dt">y =</span> count, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-146-1.png" width="672" /></p>
+<p><code>position = "dodge"</code> can be added to the <code>geom_bar()</code> call to make the bars for each lake appear side-by-side.</p>
+<pre class="sourceCode r"><code class="sourceCode r">abund.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> order, <span class="dt">y =</span> count, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>,
+           <span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-147-1.png" width="768" /></p>
+<div id="stacked-bar-plots" class="section level5">
+<h5><span class="header-section-number">18.0.4.7.1</span> Stacked Bar Plots</h5>
+<p>Another great way to visualize this data is to create stacked bar plots. Stacked bar plots are almost always the better alternative to pie charts. In general, stack bar charts provide a more straight forward representation of quantity, which makes it easier to compare multiple stacked bar charts, then multiple pie charts.</p>
+<ul>
+<li>Note that in this section the x-axis now represents <code>lake</code>, the y-axis represents <code>count</code>, and the fill represents <code>order</code>.</li>
+</ul>
+<p>Stacked bar plots can be created by adding <code>position = "stack"</code> to the <code>geom_bar()</code> call. This information is exactly the same as the <code>geom_bar()</code> plot above, where <code>position = "dodge"</code> but it is more condensed.</p>
+<pre class="sourceCode r"><code class="sourceCode r">abund.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">order =</span> forcats<span class="op">::</span><span class="kw">fct_reorder</span>(order, count, median)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> count, <span class="dt">fill =</span> order)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>,
+           <span class="dt">position =</span> <span class="st">&quot;stack&quot;</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-148-1.png" width="768" /></p>
+<p>Stacked bar plots can also be created by adding <code>position = "fill"</code> to the <code>geom_bar()</code> call. This effectively calculates relative abundance, the percentage each taxon represents within a lake. This normalizes the data and makes it easier to compare between lakes.</p>
+<pre class="sourceCode r"><code class="sourceCode r">abund.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">order =</span> forcats<span class="op">::</span><span class="kw">fct_reorder</span>(order, count, median)) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> lake, <span class="dt">y =</span> count, <span class="dt">fill =</span> order)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>,
+           <span class="dt">position =</span> <span class="st">&quot;fill&quot;</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-149-1.png" width="768" /></p>
+</div>
+</div>
+<div id="geom_point-scatter-plot" class="section level4">
+<h4><span class="header-section-number">18.0.4.8</span> geom_point (Scatter Plot)</h4>
+<ul>
+<li><strong>Definition:</strong> add points to a plot</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_point.html</a></li>
+</ul>
+<p>Creating a scatter plot is probably a more common use for <code>geom_point()</code> then the use from the <a href="ggplot2.html#geom_point">geom_point</a> section above.</p>
+<p>The <code>pct.df</code> data frame is converted from a long to a wide data format using spread. This data will be used throughout this section.</p>
+<pre class="sourceCode r"><code class="sourceCode r">wide.df &lt;-<span class="st"> </span>pct.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(station_id, lake, percent, order) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">spread</span>(order, percent)</code></pre>
+<p>Diptera and Amphipoda were the two must frequently identified taxonomic orders in this data set. Let’s see if there is a relationship between these organisms by plotting counts of Diptera on the x-axis and counts of Amphipoda on the y-axis. <code>geom_point()</code> is used to create a scattter plot. There appears to be an inverse relationship between the number of amphipods observed and the number of diptera observed.</p>
+<pre class="sourceCode r"><code class="sourceCode r">wide.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> amphipoda)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-151-1.png" width="768" /></p>
+<p>We can color the points by <code>lake</code> to see if this pattern is consistent accross lakes.</p>
+<pre class="sourceCode r"><code class="sourceCode r">wide.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> amphipoda)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake))</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-152-1.png" width="768" /></p>
+</div>
+<div id="geom_line" class="section level4">
+<h4><span class="header-section-number">18.0.4.9</span> geom_line</h4>
+<ul>
+<li><strong>Definition:</strong> draw a line between points</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_path.html</a></li>
+</ul>
+<p>A common mistake I make is to use <code>geom_line()</code> instead of <code>geom_smooth()</code>. <code>geom_line()</code> will connect points direcetly but I ussually want a linear model.</p>
+<pre class="sourceCode r"><code class="sourceCode r">wide.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> amphipoda)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_line</span>()</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-153-1.png" width="768" /></p>
+</div>
+<div id="geom_smooth" class="section level4">
+<h4><span class="header-section-number">18.0.4.10</span> geom_smooth</h4>
+<ul>
+<li><strong>Definition:</strong> plot a linear model (e.g., linear model, LOESS)</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_smooth.html</a></li>
+</ul>
+<p><code>geom_smooth()</code> allows you to specify a <code>method</code>, such as “lm” (linear model) or “loess” (LOESS) and a formula (such as <code>y ~ x</code>). In the figure below, a linear model is created using all of the data. The blue line represents the linear model and the gray band represents the standard error around the model.</p>
+<pre class="sourceCode r"><code class="sourceCode r">wide.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> amphipoda)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula =</span> y <span class="op">~</span><span class="st"> </span>x)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-154-1.png" width="768" /></p>
+<p>Maybe we want to create a linear model per lake. This can be done by specifying <code>color = lake</code> within the <code>ggplot()</code> <code>aes()</code> call. Now we can see that all lakes have a similar slope but Otisco Lake has less variability in Amphipoda and Diptera counts.</p>
+<pre class="sourceCode r"><code class="sourceCode r">wide.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> amphipoda, <span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula =</span> y <span class="op">~</span><span class="st"> </span>x)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-155-1.png" width="768" /></p>
+<p>The standard error bands in the figure above make it difficult to read the plot. These bands can be removed by specifying <code>se = FALSE</code> in the <code>geom_smooth()</code> call.</p>
+<pre class="sourceCode r"><code class="sourceCode r">wide.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> amphipoda, <span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula =</span> y <span class="op">~</span><span class="st"> </span>x, <span class="dt">se =</span> <span class="ot">FALSE</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-156-1.png" width="768" /></p>
+<p>We may also be interested in creating a LOESS curve for all of the data. This can be done by specifying <code>method = "loess"</code> within <code>geom_smooth()</code>.</p>
+<pre class="sourceCode r"><code class="sourceCode r">wide.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> amphipoda)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">formula =</span> y <span class="op">~</span><span class="st"> </span>x)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-157-1.png" width="768" /></p>
+<p>Again, <code>color</code> and <code>fill</code> can be specified in the <code>ggplot()</code> <code>aes()</code> call to apply these features globably. The plot below shows a LOESS curve for each lake. <code>color</code> influenced the point and line color in the plot, while fill influenced the color of the standard error bands.</p>
+<pre class="sourceCode r"><code class="sourceCode r">wide.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> amphipoda, <span class="dt">color =</span> lake, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">formula =</span> y <span class="op">~</span><span class="st"> </span>x)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-158-1.png" width="768" /></p>
+</div>
+<div id="facet_wrap" class="section level4">
+<h4><span class="header-section-number">18.0.4.11</span> facet_wrap</h4>
+<ul>
+<li><strong>Definition:</strong> replicate a plot by a specified feature or features</li>
+<li><strong>Link:</strong> <a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="uri">https://ggplot2.tidyverse.org/reference/facet_wrap.html</a></li>
+</ul>
+<p><code>facet_wrap()</code> is one of my favorite functions. It allows you to create multiple plots at once base on a specified feature or features.</p>
+<p>For this example the data are modified in a manner that will allow us to compare the counts of each order to Diptera counts. The <code>~order</code> within <code>facet_wrap()</code> specifies that we want to aggregate and loop through each unique string in the <code>order</code> column.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(station_id, lake, percent, order) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">spread</span>(order, percent) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">gather</span>(order, count, amphipoda<span class="op">:</span>veneroida, <span class="op">-</span>diptera) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> count, <span class="dt">color =</span> lake, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula =</span> y <span class="op">~</span><span class="st"> </span>x, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>order)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-159-1.png" width="768" /></p>
+<p>The defaults for the <code>facet_wrap()</code> arguements above make it a little hard to read all of the plots becuase they do not have the range of the Diptera vs. Amphipoda. the <code>scales</code> arguement can be used to “free” all of the axis (<code>scales = "free"</code>). This scales each of the x- and y-axes ranges specific to each plot, rather than standardizing across all plots.</p>
+<ul>
+<li>scales
+<ul>
+<li>“free_x” = y-axis standardized across plots but x-axis is specific to each plot</li>
+<li>“free_y” = x-axis standardized across plots but y-asix is specific to each plot</li>
+<li>“free” = both x- and y-axes are specific to each plot</li>
+</ul></li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(station_id, lake, percent, order) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">spread</span>(order, percent) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">gather</span>(order, count, amphipoda<span class="op">:</span>veneroida, <span class="op">-</span>diptera) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> count, <span class="dt">color =</span> lake, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula =</span> y <span class="op">~</span><span class="st"> </span>x, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>order,
+             <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-160-1.png" width="768" /></p>
+<p>Additionally, <code>ncol</code> (number of columns) can be used to modify the organization of figures.</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(station_id, lake, percent, order) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">spread</span>(order, percent) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">gather</span>(order, count, amphipoda<span class="op">:</span>veneroida, <span class="op">-</span>diptera) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> count, <span class="dt">color =</span> lake, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula =</span> y <span class="op">~</span><span class="st"> </span>x, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>order,
+             <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>,
+             <span class="dt">ncol =</span> <span class="dv">1</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-161-1.png" width="768" /></p>
+<p>We can use more than one feature to <code>facet_wrap()</code> by. For example, in the call below the plots are aggregated by <code>order</code> and <code>lake</code> (<code>~order + lake</code>).</p>
+<pre class="sourceCode r"><code class="sourceCode r">pct.df <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(station_id, lake, percent, order) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">spread</span>(order, percent) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">gather</span>(order, count, amphipoda<span class="op">:</span>veneroida, <span class="op">-</span>diptera) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> diptera, <span class="dt">y =</span> count, <span class="dt">color =</span> lake, <span class="dt">fill =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> lake)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula =</span> y <span class="op">~</span><span class="st"> </span>x, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>order <span class="op">+</span><span class="st"> </span>lake,
+             <span class="dt">ncol =</span> <span class="dv">3</span>)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-162-1.png" width="768" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lubridate.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="shiny.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 24, 2019"
+output: html_document
+---
+
+# Function Exercises
+
+1. Create a function called "pct", for "percent," with two arguements (`value` and `total`). The function should divide `value` by `total` and then multiplies by 100.
+
+2. Test that your `pct()` function returns 6 if `value = 50, total = 100`
+
+3. Restrict the `pct()` function to only work if each of the arguements supplied are length one. Create error messages specific to each arguement, which will inform you of which arguement failed to meet the this requirement.
+
+4. Test that the messages created in exercise 3 work correctly on:
+    + `value = 50, total = 100`
+    + `value = c(25, 50), total = 100`
+    + `value = 50, total = c(100, 200)`
+
+5. Which message will you recieve if `value = c(25, 50), total = c(100, 200)`? Why is this the only message that is returned?
+```{r, error=TRUE}
+pct(c(25, 50), c(100, 200))
+```
+
+6. Can you make a function that standardizes the three length checks? 
+    + Call the function "length_check"
+    + Hints:
+        + Should have 1 arguement
+        + Checkout `paste()` (?paste)
+        + Use `substitute()`  within the `paste()` call to return the name of the arguement supplied (i.e., "value" or "total")
+
+7. Add `check_length()` to your `pct()` function.
+
+8. Test the your updated `pct()` function on:
+    + `value = 50, total = 100`
+    + `value = c(25, 50), total = 100`
+    + `value = 50, total = c(100, 200)`
+```{r, error=TRUE}
+pct(50, 100) 
+pct(c(25, 50), 100)
+pct(50, c(100, 200))
+```

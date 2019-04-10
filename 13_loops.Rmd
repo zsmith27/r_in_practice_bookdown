@@ -1,0 +1,88 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 23, 2019"
+output: html_document
+---
+
+# Loops
+
+## for loop
+
+```{r}
+for (i in c("a", "b", "c")){
+  print(paste("This iteration represents", i))
+}
+```
+
+## apply family
+
+* __Link:__ https://www.datacamp.com/community/tutorials/r-tutorial-apply-family
+
+These functions also perform loops but are a little bit more specific in how the loop is performed or how the output is returned relative to the `for` loop.
+
+### apply
+
+The `iris` data set will be used as an example. The `Species` column will be dropped from `iris` for this exercies and this object will be stored as `iris.df`.
+```{r}
+iris.df <- head(iris[, names(iris) != "Species"])
+```
+
+Apply a function by row. In this case, `sum()` by row.
+```{r}
+apply(iris.df, 1, sum)
+```
+
+Apply a function by column. In this case, `sum()` by column.
+```{r}
+apply(iris.df, 2, sum)
+```
+
+### lapply
+
+`lapply()` loops through a vector or list and returns a list, hence the "L" in `lapply()`. Compare the output below to the for loop example. `lapply()` returns a list of strings that were printed in the for loop example.
+```{r}
+lapply(c("a", "b", "c"), function(i) {
+  paste("This iteration represents", i)
+})
+```
+
+Now compare the `apply()` example summing rows above to this `lapply()` call
+```{r}
+lapply(1:nrow(iris.df), function(i) {
+  sum(iris.df[i, ])
+})
+```
+
+Now compare the `apply()` example summing columns above to this `lapply()` call.
+```{r}
+lapply(1:ncol(iris.df), function(i) {
+  sum(iris.df[, i])
+})
+```
+
+
+### sapply
+
+
+`sapply()` loops through a vector or list and returns a vector. Compare the output below to the similar `for()` loop and `lapply()` examples. `sapply()` returns a vector of strings that were printed in the `for()` loop example and the strings returned as a list in the `lapply()` example.
+```{r}
+sapply(c("a", "b", "c"), function(i) {
+  paste("This iteration represents", i)
+})
+```
+
+Now compare the `apply()` and `lapply()` examples summing rows above to this `sapply()` call.
+```{r}
+sapply(1:nrow(iris.df), function(i) {
+  sum(iris.df[i, ])
+})
+```
+
+Now compare the `apply()` and `lapply()` examples summing columns above to this `sapply()` call.
+```{r}
+sapply(1:ncol(iris.df), function(i) {
+  sum(iris.df[, i])
+})
+```
+
