@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>17 lubridate | R in Practice</title>
-  <meta name="description" content="17 lubridate | R in Practice">
+  <title>18 lubridate | R in Practice</title>
+  <meta name="description" content="18 lubridate | R in Practice">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="17 lubridate | R in Practice" />
+  <meta property="og:title" content="18 lubridate | R in Practice" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="17 lubridate | R in Practice" />
+  <meta name="twitter:title" content="18 lubridate | R in Practice" />
   
   
   
@@ -133,177 +133,178 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#goals"><i class="fa fa-check"></i><b>1.1</b> Goals</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#tip"><i class="fa fa-check"></i><b>1.1.1</b> Tip</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#goals"><i class="fa fa-check"></i><b>2.1</b> Goals</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction.html"><a href="introduction.html#tip"><i class="fa fa-check"></i><b>2.1.1</b> Tip</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#what-is-r"><i class="fa fa-check"></i><b>1.2</b> What is R?</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#benefits-of-using-r"><i class="fa fa-check"></i><b>1.2.1</b> Benefits of Using R</a></li>
-<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#r-packages"><i class="fa fa-check"></i><b>1.2.2</b> R Packages</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="quick-reference.html"><a href="quick-reference.html"><i class="fa fa-check"></i><b>2</b> Quick Reference</a></li>
-<li class="chapter" data-level="3" data-path="installation-links.html"><a href="installation-links.html"><i class="fa fa-check"></i><b>3</b> Installation Links</a><ul>
-<li class="chapter" data-level="3.1" data-path="installation-links.html"><a href="installation-links.html#updating-software-and-packages"><i class="fa fa-check"></i><b>3.1</b> Updating Software and Packages</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="installation-links.html"><a href="installation-links.html#r"><i class="fa fa-check"></i><b>3.1.1</b> R</a></li>
-<li class="chapter" data-level="3.1.2" data-path="installation-links.html"><a href="installation-links.html#rstudio"><i class="fa fa-check"></i><b>3.1.2</b> RStudio</a></li>
-<li class="chapter" data-level="3.1.3" data-path="installation-links.html"><a href="installation-links.html#r-packages-1"><i class="fa fa-check"></i><b>3.1.3</b> R-Packages</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#what-is-r"><i class="fa fa-check"></i><b>2.2</b> What is R?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="introduction.html"><a href="introduction.html#benefits-of-using-r"><i class="fa fa-check"></i><b>2.2.1</b> Benefits of Using R</a></li>
+<li class="chapter" data-level="2.2.2" data-path="introduction.html"><a href="introduction.html#r-packages"><i class="fa fa-check"></i><b>2.2.2</b> R Packages</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="rstudio-1.html"><a href="rstudio-1.html"><i class="fa fa-check"></i><b>4</b> RStudio</a><ul>
-<li class="chapter" data-level="4.1" data-path="rstudio-1.html"><a href="rstudio-1.html#create-a-new-script"><i class="fa fa-check"></i><b>4.1</b> Create a New Script</a></li>
-<li class="chapter" data-level="4.2" data-path="rstudio-1.html"><a href="rstudio-1.html#rstudio-overview"><i class="fa fa-check"></i><b>4.2</b> RStudio Overview</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="rstudio-1.html"><a href="rstudio-1.html#source-window"><i class="fa fa-check"></i><b>4.2.1</b> Source Window</a></li>
-<li class="chapter" data-level="4.2.2" data-path="rstudio-1.html"><a href="rstudio-1.html#console-window"><i class="fa fa-check"></i><b>4.2.2</b> Console Window</a></li>
-<li class="chapter" data-level="4.2.3" data-path="rstudio-1.html"><a href="rstudio-1.html#environment-history-connections-build-and-git"><i class="fa fa-check"></i><b>4.2.3</b> Environment, History, Connections, Build, and Git</a></li>
-<li class="chapter" data-level="4.2.4" data-path="rstudio-1.html"><a href="rstudio-1.html#files-plots-packages-help-and-viewer"><i class="fa fa-check"></i><b>4.2.4</b> Files, Plots, Packages, Help, and Viewer</a></li>
-<li class="chapter" data-level="4.2.5" data-path="rstudio-1.html"><a href="rstudio-1.html#files-tab"><i class="fa fa-check"></i><b>4.2.5</b> Files Tab</a></li>
-<li class="chapter" data-level="4.2.6" data-path="rstudio-1.html"><a href="rstudio-1.html#plots-tab"><i class="fa fa-check"></i><b>4.2.6</b> Plots Tab</a></li>
-<li class="chapter" data-level="4.2.7" data-path="rstudio-1.html"><a href="rstudio-1.html#packages-tab"><i class="fa fa-check"></i><b>4.2.7</b> Packages Tab</a></li>
-<li class="chapter" data-level="4.2.8" data-path="rstudio-1.html"><a href="rstudio-1.html#help-tab"><i class="fa fa-check"></i><b>4.2.8</b> Help Tab</a></li>
-<li class="chapter" data-level="4.2.9" data-path="rstudio-1.html"><a href="rstudio-1.html#viewer-tab"><i class="fa fa-check"></i><b>4.2.9</b> Viewer Tab</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="rstudio-1.html"><a href="rstudio-1.html#shortcuts"><i class="fa fa-check"></i><b>4.3</b> Shortcuts</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="r-project.html"><a href="r-project.html"><i class="fa fa-check"></i><b>5</b> R Project</a><ul>
-<li class="chapter" data-level="5.1" data-path="r-project.html"><a href="r-project.html#create-a-new-r-project"><i class="fa fa-check"></i><b>5.1</b> Create a New R Project</a></li>
-<li class="chapter" data-level="5.2" data-path="r-project.html"><a href="r-project.html#navigate-between-packages"><i class="fa fa-check"></i><b>5.2</b> Navigate Between Packages</a></li>
-<li class="chapter" data-level="5.3" data-path="r-project.html"><a href="r-project.html#recommended-workflow"><i class="fa fa-check"></i><b>5.3</b> Recommended Workflow</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>6</b> Version Control</a><ul>
-<li class="chapter" data-level="6.1" data-path="version-control.html"><a href="version-control.html#git-resources"><i class="fa fa-check"></i><b>6.1</b> Git Resources</a></li>
-<li class="chapter" data-level="6.2" data-path="version-control.html"><a href="version-control.html#link-r-studio-to-github-repository"><i class="fa fa-check"></i><b>6.2</b> Link R Studio to GitHub Repository</a></li>
-<li class="chapter" data-level="6.3" data-path="version-control.html"><a href="version-control.html#push-and-pull-repository-changes-in-r-studio"><i class="fa fa-check"></i><b>6.3</b> Push and Pull Repository Changes in R Studio</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="version-control.html"><a href="version-control.html#pull"><i class="fa fa-check"></i><b>6.3.1</b> Pull</a></li>
-<li class="chapter" data-level="6.3.2" data-path="version-control.html"><a href="version-control.html#commit"><i class="fa fa-check"></i><b>6.3.2</b> Commit</a></li>
-<li class="chapter" data-level="6.3.3" data-path="version-control.html"><a href="version-control.html#push"><i class="fa fa-check"></i><b>6.3.3</b> Push</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="version-control.html"><a href="version-control.html#repository-branch"><i class="fa fa-check"></i><b>6.4</b> Repository Branch</a><ul>
-<li class="chapter" data-level="6.4.1" data-path="version-control.html"><a href="version-control.html#create-a-new-branch"><i class="fa fa-check"></i><b>6.4.1</b> Create a New Branch</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="version-control.html"><a href="version-control.html#merge-branches"><i class="fa fa-check"></i><b>6.5</b> Merge Branches</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>7</b> R Markdown</a><ul>
-<li class="chapter" data-level="7.1" data-path="r-markdown.html"><a href="r-markdown.html#benefits"><i class="fa fa-check"></i><b>7.1</b> Benefits</a></li>
-<li class="chapter" data-level="7.2" data-path="r-markdown.html"><a href="r-markdown.html#basic-overview"><i class="fa fa-check"></i><b>7.2</b> Basic Overview</a></li>
-<li class="chapter" data-level="7.3" data-path="r-markdown.html"><a href="r-markdown.html#create-a-new-document"><i class="fa fa-check"></i><b>7.3</b> Create a New Document</a></li>
-<li class="chapter" data-level="7.4" data-path="r-markdown.html"><a href="r-markdown.html#editing"><i class="fa fa-check"></i><b>7.4</b> Editing</a><ul>
-<li class="chapter" data-level="7.4.1" data-path="r-markdown.html"><a href="r-markdown.html#yaml-header"><i class="fa fa-check"></i><b>7.4.1</b> YAML Header</a></li>
-<li class="chapter" data-level="7.4.2" data-path="r-markdown.html"><a href="r-markdown.html#heading-text"><i class="fa fa-check"></i><b>7.4.2</b> Heading Text</a></li>
-<li class="chapter" data-level="7.4.3" data-path="r-markdown.html"><a href="r-markdown.html#plain-text"><i class="fa fa-check"></i><b>7.4.3</b> Plain Text</a></li>
-<li class="chapter" data-level="7.4.4" data-path="r-markdown.html"><a href="r-markdown.html#insert-code-chunks"><i class="fa fa-check"></i><b>7.4.4</b> Insert Code Chunks</a></li>
-</ul></li>
-<li class="chapter" data-level="7.5" data-path="r-markdown.html"><a href="r-markdown.html#compile-the-document"><i class="fa fa-check"></i><b>7.5</b> Compile the Document</a></li>
-<li class="chapter" data-level="7.6" data-path="r-markdown.html"><a href="r-markdown.html#file-management"><i class="fa fa-check"></i><b>7.6</b> File Management</a></li>
-<li class="chapter" data-level="7.7" data-path="r-markdown.html"><a href="r-markdown.html#child-documents"><i class="fa fa-check"></i><b>7.7</b> Child Documents</a><ul>
-<li class="chapter" data-level="7.7.1" data-path="r-markdown.html"><a href="r-markdown.html#extract-and-run-r-code-from-r-markdown-files"><i class="fa fa-check"></i><b>7.7.1</b> Extract and Run R-Code from R Markdown Files</a></li>
-</ul></li>
-<li class="chapter" data-level="7.8" data-path="r-markdown.html"><a href="r-markdown.html#parameterized-reports"><i class="fa fa-check"></i><b>7.8</b> Parameterized Reports</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="base-r.html"><a href="base-r.html"><i class="fa fa-check"></i><b>8</b> Base R</a><ul>
-<li class="chapter" data-level="8.1" data-path="base-r.html"><a href="base-r.html#data-types"><i class="fa fa-check"></i><b>8.1</b> Data Types</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="base-r.html"><a href="base-r.html#numeric-double"><i class="fa fa-check"></i><b>8.1.1</b> Numeric (Double)</a></li>
-<li class="chapter" data-level="8.1.2" data-path="base-r.html"><a href="base-r.html#integer"><i class="fa fa-check"></i><b>8.1.2</b> Integer</a></li>
-<li class="chapter" data-level="8.1.3" data-path="base-r.html"><a href="base-r.html#logical"><i class="fa fa-check"></i><b>8.1.3</b> Logical</a></li>
-<li class="chapter" data-level="8.1.4" data-path="base-r.html"><a href="base-r.html#character"><i class="fa fa-check"></i><b>8.1.4</b> Character</a></li>
-<li class="chapter" data-level="8.1.5" data-path="base-r.html"><a href="base-r.html#factor"><i class="fa fa-check"></i><b>8.1.5</b> Factor</a></li>
+<li class="chapter" data-level="3" data-path="quick-reference.html"><a href="quick-reference.html"><i class="fa fa-check"></i><b>3</b> Quick Reference</a></li>
+<li class="chapter" data-level="4" data-path="installation-links.html"><a href="installation-links.html"><i class="fa fa-check"></i><b>4</b> Installation Links</a><ul>
+<li class="chapter" data-level="4.1" data-path="installation-links.html"><a href="installation-links.html#updating-software-and-packages"><i class="fa fa-check"></i><b>4.1</b> Updating Software and Packages</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="installation-links.html"><a href="installation-links.html#r"><i class="fa fa-check"></i><b>4.1.1</b> R</a></li>
+<li class="chapter" data-level="4.1.2" data-path="installation-links.html"><a href="installation-links.html#rstudio"><i class="fa fa-check"></i><b>4.1.2</b> RStudio</a></li>
+<li class="chapter" data-level="4.1.3" data-path="installation-links.html"><a href="installation-links.html#r-packages-1"><i class="fa fa-check"></i><b>4.1.3</b> R-Packages</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data Structures</a><ul>
-<li class="chapter" data-level="9.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>9.1</b> Vectors</a></li>
-<li class="chapter" data-level="9.2" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>9.2</b> Matrices</a></li>
-<li class="chapter" data-level="9.3" data-path="data-structures.html"><a href="data-structures.html#arrays"><i class="fa fa-check"></i><b>9.3</b> Arrays</a></li>
-<li class="chapter" data-level="9.4" data-path="data-structures.html"><a href="data-structures.html#data-frames"><i class="fa fa-check"></i><b>9.4</b> Data Frames</a></li>
-<li class="chapter" data-level="9.5" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>9.5</b> Lists</a></li>
+<li class="chapter" data-level="5" data-path="rstudio-1.html"><a href="rstudio-1.html"><i class="fa fa-check"></i><b>5</b> RStudio</a><ul>
+<li class="chapter" data-level="5.1" data-path="rstudio-1.html"><a href="rstudio-1.html#create-a-new-script"><i class="fa fa-check"></i><b>5.1</b> Create a New Script</a></li>
+<li class="chapter" data-level="5.2" data-path="rstudio-1.html"><a href="rstudio-1.html#rstudio-overview"><i class="fa fa-check"></i><b>5.2</b> RStudio Overview</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="rstudio-1.html"><a href="rstudio-1.html#source-window"><i class="fa fa-check"></i><b>5.2.1</b> Source Window</a></li>
+<li class="chapter" data-level="5.2.2" data-path="rstudio-1.html"><a href="rstudio-1.html#console-window"><i class="fa fa-check"></i><b>5.2.2</b> Console Window</a></li>
+<li class="chapter" data-level="5.2.3" data-path="rstudio-1.html"><a href="rstudio-1.html#environment-history-connections-build-and-git"><i class="fa fa-check"></i><b>5.2.3</b> Environment, History, Connections, Build, and Git</a></li>
+<li class="chapter" data-level="5.2.4" data-path="rstudio-1.html"><a href="rstudio-1.html#files-plots-packages-help-and-viewer"><i class="fa fa-check"></i><b>5.2.4</b> Files, Plots, Packages, Help, and Viewer</a></li>
+<li class="chapter" data-level="5.2.5" data-path="rstudio-1.html"><a href="rstudio-1.html#files-tab"><i class="fa fa-check"></i><b>5.2.5</b> Files Tab</a></li>
+<li class="chapter" data-level="5.2.6" data-path="rstudio-1.html"><a href="rstudio-1.html#plots-tab"><i class="fa fa-check"></i><b>5.2.6</b> Plots Tab</a></li>
+<li class="chapter" data-level="5.2.7" data-path="rstudio-1.html"><a href="rstudio-1.html#packages-tab"><i class="fa fa-check"></i><b>5.2.7</b> Packages Tab</a></li>
+<li class="chapter" data-level="5.2.8" data-path="rstudio-1.html"><a href="rstudio-1.html#help-tab"><i class="fa fa-check"></i><b>5.2.8</b> Help Tab</a></li>
+<li class="chapter" data-level="5.2.9" data-path="rstudio-1.html"><a href="rstudio-1.html#viewer-tab"><i class="fa fa-check"></i><b>5.2.9</b> Viewer Tab</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html"><i class="fa fa-check"></i><b>10</b> Data Structure Manipulation</a><ul>
-<li class="chapter" data-level="10.1" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#assignment-opperator--"><i class="fa fa-check"></i><b>10.1</b> Assignment Opperator (<code>&lt;-</code>)</a></li>
-<li class="chapter" data-level="10.2" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#manipulting-vectors"><i class="fa fa-check"></i><b>10.2</b> Manipulting Vectors</a></li>
-<li class="chapter" data-level="10.3" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#manipulating-data-frames"><i class="fa fa-check"></i><b>10.3</b> Manipulating Data Frames</a></li>
-<li class="chapter" data-level="10.4" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#importing-data"><i class="fa fa-check"></i><b>10.4</b> Importing Data</a><ul>
-<li class="chapter" data-level="10.4.1" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#file_path"><i class="fa fa-check"></i><b>10.4.1</b> file_path</a></li>
-<li class="chapter" data-level="10.4.2" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#read.csv"><i class="fa fa-check"></i><b>10.4.2</b> read.csv</a></li>
+<li class="chapter" data-level="5.3" data-path="rstudio-1.html"><a href="rstudio-1.html#shortcuts"><i class="fa fa-check"></i><b>5.3</b> Shortcuts</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="r-project.html"><a href="r-project.html"><i class="fa fa-check"></i><b>6</b> R Project</a><ul>
+<li class="chapter" data-level="6.1" data-path="r-project.html"><a href="r-project.html#create-a-new-r-project"><i class="fa fa-check"></i><b>6.1</b> Create a New R Project</a></li>
+<li class="chapter" data-level="6.2" data-path="r-project.html"><a href="r-project.html#navigate-between-packages"><i class="fa fa-check"></i><b>6.2</b> Navigate Between Packages</a></li>
+<li class="chapter" data-level="6.3" data-path="r-project.html"><a href="r-project.html#recommended-workflow"><i class="fa fa-check"></i><b>6.3</b> Recommended Workflow</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i><b>11</b> Style Guide</a><ul>
-<li class="chapter" data-level="11.1" data-path="style-guide.html"><a href="style-guide.html#names"><i class="fa fa-check"></i><b>11.1</b> Names</a><ul>
-<li class="chapter" data-level="11.1.1" data-path="style-guide.html"><a href="style-guide.html#object-names-discriptive-suffix"><i class="fa fa-check"></i><b>11.1.1</b> Object Names: Discriptive Suffix</a></li>
+<li class="chapter" data-level="7" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>7</b> Version Control</a><ul>
+<li class="chapter" data-level="7.1" data-path="version-control.html"><a href="version-control.html#git-resources"><i class="fa fa-check"></i><b>7.1</b> Git Resources</a></li>
+<li class="chapter" data-level="7.2" data-path="version-control.html"><a href="version-control.html#link-r-studio-to-github-repository"><i class="fa fa-check"></i><b>7.2</b> Link R Studio to GitHub Repository</a></li>
+<li class="chapter" data-level="7.3" data-path="version-control.html"><a href="version-control.html#push-and-pull-repository-changes-in-r-studio"><i class="fa fa-check"></i><b>7.3</b> Push and Pull Repository Changes in R Studio</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="version-control.html"><a href="version-control.html#pull"><i class="fa fa-check"></i><b>7.3.1</b> Pull</a></li>
+<li class="chapter" data-level="7.3.2" data-path="version-control.html"><a href="version-control.html#commit"><i class="fa fa-check"></i><b>7.3.2</b> Commit</a></li>
+<li class="chapter" data-level="7.3.3" data-path="version-control.html"><a href="version-control.html#push"><i class="fa fa-check"></i><b>7.3.3</b> Push</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="style-guide.html"><a href="style-guide.html#spacing-and-indenting"><i class="fa fa-check"></i><b>11.2</b> Spacing and Indenting</a></li>
+<li class="chapter" data-level="7.4" data-path="version-control.html"><a href="version-control.html#repository-branch"><i class="fa fa-check"></i><b>7.4</b> Repository Branch</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="version-control.html"><a href="version-control.html#create-a-new-branch"><i class="fa fa-check"></i><b>7.4.1</b> Create a New Branch</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>12</b> Writing Functions</a></li>
-<li class="chapter" data-level="13" data-path="loops.html"><a href="loops.html"><i class="fa fa-check"></i><b>13</b> Loops</a><ul>
-<li class="chapter" data-level="13.1" data-path="loops.html"><a href="loops.html#for-loop"><i class="fa fa-check"></i><b>13.1</b> for loop</a></li>
-<li class="chapter" data-level="13.2" data-path="loops.html"><a href="loops.html#apply-family"><i class="fa fa-check"></i><b>13.2</b> apply family</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="loops.html"><a href="loops.html#apply"><i class="fa fa-check"></i><b>13.2.1</b> apply</a></li>
-<li class="chapter" data-level="13.2.2" data-path="loops.html"><a href="loops.html#lapply"><i class="fa fa-check"></i><b>13.2.2</b> lapply</a></li>
-<li class="chapter" data-level="13.2.3" data-path="loops.html"><a href="loops.html#sapply"><i class="fa fa-check"></i><b>13.2.3</b> sapply</a></li>
+<li class="chapter" data-level="7.5" data-path="version-control.html"><a href="version-control.html#merge-branches"><i class="fa fa-check"></i><b>7.5</b> Merge Branches</a></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>8</b> R Markdown</a><ul>
+<li class="chapter" data-level="8.1" data-path="r-markdown.html"><a href="r-markdown.html#benefits"><i class="fa fa-check"></i><b>8.1</b> Benefits</a></li>
+<li class="chapter" data-level="8.2" data-path="r-markdown.html"><a href="r-markdown.html#basic-overview"><i class="fa fa-check"></i><b>8.2</b> Basic Overview</a></li>
+<li class="chapter" data-level="8.3" data-path="r-markdown.html"><a href="r-markdown.html#create-a-new-document"><i class="fa fa-check"></i><b>8.3</b> Create a New Document</a></li>
+<li class="chapter" data-level="8.4" data-path="r-markdown.html"><a href="r-markdown.html#editing"><i class="fa fa-check"></i><b>8.4</b> Editing</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="r-markdown.html"><a href="r-markdown.html#yaml-header"><i class="fa fa-check"></i><b>8.4.1</b> YAML Header</a></li>
+<li class="chapter" data-level="8.4.2" data-path="r-markdown.html"><a href="r-markdown.html#heading-text"><i class="fa fa-check"></i><b>8.4.2</b> Heading Text</a></li>
+<li class="chapter" data-level="8.4.3" data-path="r-markdown.html"><a href="r-markdown.html#plain-text"><i class="fa fa-check"></i><b>8.4.3</b> Plain Text</a></li>
+<li class="chapter" data-level="8.4.4" data-path="r-markdown.html"><a href="r-markdown.html#insert-code-chunks"><i class="fa fa-check"></i><b>8.4.4</b> Insert Code Chunks</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>14</b> Tidyverse</a><ul>
-<li class="chapter" data-level="14.1" data-path="tidyverse.html"><a href="tidyverse.html#tidyverse-directory"><i class="fa fa-check"></i><b>14.1</b> Tidyverse Directory</a></li>
-<li class="chapter" data-level="14.2" data-path="tidyverse.html"><a href="tidyverse.html#magrittr"><i class="fa fa-check"></i><b>14.2</b> magrittr</a><ul>
-<li class="chapter" data-level="14.2.1" data-path="tidyverse.html"><a href="tidyverse.html#example-data"><i class="fa fa-check"></i><b>14.2.1</b> Example Data</a></li>
-<li class="chapter" data-level="14.2.2" data-path="tidyverse.html"><a href="tidyverse.html#pipe-operator"><i class="fa fa-check"></i><b>14.2.2</b> Pipe Operator (%&gt;%)</a></li>
+<li class="chapter" data-level="8.5" data-path="r-markdown.html"><a href="r-markdown.html#compile-the-document"><i class="fa fa-check"></i><b>8.5</b> Compile the Document</a></li>
+<li class="chapter" data-level="8.6" data-path="r-markdown.html"><a href="r-markdown.html#file-management"><i class="fa fa-check"></i><b>8.6</b> File Management</a></li>
+<li class="chapter" data-level="8.7" data-path="r-markdown.html"><a href="r-markdown.html#child-documents"><i class="fa fa-check"></i><b>8.7</b> Child Documents</a><ul>
+<li class="chapter" data-level="8.7.1" data-path="r-markdown.html"><a href="r-markdown.html#extract-and-run-r-code-from-r-markdown-files"><i class="fa fa-check"></i><b>8.7.1</b> Extract and Run R-Code from R Markdown Files</a></li>
 </ul></li>
+<li class="chapter" data-level="8.8" data-path="r-markdown.html"><a href="r-markdown.html#parameterized-reports"><i class="fa fa-check"></i><b>8.8</b> Parameterized Reports</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="dplyr.html"><a href="dplyr.html"><i class="fa fa-check"></i><b>15</b> dplyr</a><ul>
-<li class="chapter" data-level="15.0.1" data-path="dplyr.html"><a href="dplyr.html#example-data-1"><i class="fa fa-check"></i><b>15.0.1</b> Example Data</a></li>
-<li class="chapter" data-level="15.0.2" data-path="dplyr.html"><a href="dplyr.html#rename"><i class="fa fa-check"></i><b>15.0.2</b> Rename</a></li>
-<li class="chapter" data-level="15.0.3" data-path="dplyr.html"><a href="dplyr.html#filter"><i class="fa fa-check"></i><b>15.0.3</b> Filter</a></li>
-<li class="chapter" data-level="15.0.4" data-path="dplyr.html"><a href="dplyr.html#select"><i class="fa fa-check"></i><b>15.0.4</b> Select</a></li>
-<li class="chapter" data-level="15.0.5" data-path="dplyr.html"><a href="dplyr.html#distinct"><i class="fa fa-check"></i><b>15.0.5</b> distinct</a></li>
-<li class="chapter" data-level="15.0.6" data-path="dplyr.html"><a href="dplyr.html#mutate"><i class="fa fa-check"></i><b>15.0.6</b> mutate</a></li>
-<li class="chapter" data-level="15.0.7" data-path="dplyr.html"><a href="dplyr.html#group_by"><i class="fa fa-check"></i><b>15.0.7</b> group_by</a></li>
-<li class="chapter" data-level="15.0.8" data-path="dplyr.html"><a href="dplyr.html#summarize"><i class="fa fa-check"></i><b>15.0.8</b> summarize</a></li>
-<li class="chapter" data-level="15.0.9" data-path="dplyr.html"><a href="dplyr.html#joins"><i class="fa fa-check"></i><b>15.0.9</b> Joins</a></li>
-<li class="chapter" data-level="15.0.10" data-path="dplyr.html"><a href="dplyr.html#bind"><i class="fa fa-check"></i><b>15.0.10</b> Bind</a></li>
-</ul></li>
-<li class="chapter" data-level="16" data-path="tidyr.html"><a href="tidyr.html"><i class="fa fa-check"></i><b>16</b> tidyr</a><ul>
-<li class="chapter" data-level="16.0.1" data-path="tidyr.html"><a href="tidyr.html#example-data-2"><i class="fa fa-check"></i><b>16.0.1</b> Example Data</a></li>
-<li class="chapter" data-level="16.0.2" data-path="tidyr.html"><a href="tidyr.html#spread"><i class="fa fa-check"></i><b>16.0.2</b> spread</a></li>
-<li class="chapter" data-level="16.0.3" data-path="tidyr.html"><a href="tidyr.html#gather"><i class="fa fa-check"></i><b>16.0.3</b> gather</a></li>
-<li class="chapter" data-level="16.0.4" data-path="tidyr.html"><a href="tidyr.html#complete"><i class="fa fa-check"></i><b>16.0.4</b> complete</a></li>
-<li class="chapter" data-level="16.0.5" data-path="tidyr.html"><a href="tidyr.html#separate"><i class="fa fa-check"></i><b>16.0.5</b> separate</a></li>
-<li class="chapter" data-level="16.0.6" data-path="tidyr.html"><a href="tidyr.html#unite"><i class="fa fa-check"></i><b>16.0.6</b> unite</a></li>
-</ul></li>
-<li class="chapter" data-level="17" data-path="lubridate.html"><a href="lubridate.html"><i class="fa fa-check"></i><b>17</b> lubridate</a><ul>
-<li class="chapter" data-level="17.0.1" data-path="lubridate.html"><a href="lubridate.html#example-data-3"><i class="fa fa-check"></i><b>17.0.1</b> Example Data</a></li>
-<li class="chapter" data-level="17.0.2" data-path="lubridate.html"><a href="lubridate.html#mdy-ymd-dmy-ymd_hms"><i class="fa fa-check"></i><b>17.0.2</b> mdy, ymd, dmy, ymd_hms, …</a></li>
-<li class="chapter" data-level="17.0.3" data-path="lubridate.html"><a href="lubridate.html#year-month-mday-yday-hour-minute-and-second"><i class="fa fa-check"></i><b>17.0.3</b> year, month, mday, yday, hour, minute, and second</a></li>
-<li class="chapter" data-level="17.0.4" data-path="lubridate.html"><a href="lubridate.html#round_date-floor_date-and-ceiling_date"><i class="fa fa-check"></i><b>17.0.4</b> round_date, floor_date, and ceiling_date</a></li>
-</ul></li>
-<li class="chapter" data-level="18" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>18</b> ggplot2</a><ul>
-<li class="chapter" data-level="18.0.1" data-path="ggplot2.html"><a href="ggplot2.html#example-data-4"><i class="fa fa-check"></i><b>18.0.1</b> Example Data</a></li>
-<li class="chapter" data-level="18.0.2" data-path="ggplot2.html"><a href="ggplot2.html#ggplot"><i class="fa fa-check"></i><b>18.0.2</b> ggplot</a></li>
-<li class="chapter" data-level="18.0.3" data-path="ggplot2.html"><a href="ggplot2.html#aes"><i class="fa fa-check"></i><b>18.0.3</b> aes</a></li>
-<li class="chapter" data-level="18.0.4" data-path="ggplot2.html"><a href="ggplot2.html#geom_boxplot"><i class="fa fa-check"></i><b>18.0.4</b> geom_boxplot</a></li>
-</ul></li>
-<li class="chapter" data-level="19" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>19</b> Shiny</a><ul>
-<li class="chapter" data-level="19.1" data-path="shiny.html"><a href="shiny.html#what-is-shiny"><i class="fa fa-check"></i><b>19.1</b> What is Shiny?</a></li>
-<li class="chapter" data-level="19.2" data-path="shiny.html"><a href="shiny.html#resources"><i class="fa fa-check"></i><b>19.2</b> Resources</a></li>
-<li class="chapter" data-level="19.3" data-path="shiny.html"><a href="shiny.html#project-composition"><i class="fa fa-check"></i><b>19.3</b> Project Composition</a><ul>
-<li class="chapter" data-level="19.3.1" data-path="shiny.html"><a href="shiny.html#ui.r"><i class="fa fa-check"></i><b>19.3.1</b> ui.R</a></li>
-<li class="chapter" data-level="19.3.2" data-path="shiny.html"><a href="shiny.html#server.r"><i class="fa fa-check"></i><b>19.3.2</b> server.R</a></li>
-<li class="chapter" data-level="19.3.3" data-path="shiny.html"><a href="shiny.html#global.r"><i class="fa fa-check"></i><b>19.3.3</b> global.R</a></li>
-<li class="chapter" data-level="19.3.4" data-path="shiny.html"><a href="shiny.html#structure"><i class="fa fa-check"></i><b>19.3.4</b> Structure</a></li>
-<li class="chapter" data-level="19.3.5" data-path="shiny.html"><a href="shiny.html#r-packages-2"><i class="fa fa-check"></i><b>19.3.5</b> R-Packages</a></li>
-</ul></li>
-<li class="chapter" data-level="19.4" data-path="shiny.html"><a href="shiny.html#helpful-r-packages"><i class="fa fa-check"></i><b>19.4</b> Helpful R-Packages</a><ul>
-<li class="chapter" data-level="19.4.1" data-path="shiny.html"><a href="shiny.html#dt-interactive-tables"><i class="fa fa-check"></i><b>19.4.1</b> DT (Interactive Tables)</a></li>
-<li class="chapter" data-level="19.4.2" data-path="shiny.html"><a href="shiny.html#dygraphs-interactive-time-series-plots"><i class="fa fa-check"></i><b>19.4.2</b> dygraphs (Interactive Time Series Plots)</a></li>
-<li class="chapter" data-level="19.4.3" data-path="shiny.html"><a href="shiny.html#leaflet-interactive-maps"><i class="fa fa-check"></i><b>19.4.3</b> leaflet (Interactive Maps)</a></li>
-<li class="chapter" data-level="19.4.4" data-path="shiny.html"><a href="shiny.html#plotly-interactive-figures"><i class="fa fa-check"></i><b>19.4.4</b> plotly (Interactive Figures)</a></li>
-</ul></li>
-<li class="chapter" data-level="19.5" data-path="shiny.html"><a href="shiny.html#publishing"><i class="fa fa-check"></i><b>19.5</b> Publishing</a><ul>
-<li class="chapter" data-level="19.5.1" data-path="shiny.html"><a href="shiny.html#how-to-publish-to-shinyapps.io"><i class="fa fa-check"></i><b>19.5.1</b> How to Publish to shinyapps.io</a></li>
-</ul></li>
-<li class="chapter" data-level="19.6" data-path="shiny.html"><a href="shiny.html#data-management"><i class="fa fa-check"></i><b>19.6</b> Data Management</a><ul>
-<li class="chapter" data-level="19.6.1" data-path="shiny.html"><a href="shiny.html#small-data-sets"><i class="fa fa-check"></i><b>19.6.1</b> Small Data Sets</a></li>
-<li class="chapter" data-level="19.6.2" data-path="shiny.html"><a href="shiny.html#large-data-sets"><i class="fa fa-check"></i><b>19.6.2</b> Large Data Sets</a></li>
+<li class="chapter" data-level="9" data-path="base-r.html"><a href="base-r.html"><i class="fa fa-check"></i><b>9</b> Base R</a><ul>
+<li class="chapter" data-level="9.1" data-path="base-r.html"><a href="base-r.html#data-types"><i class="fa fa-check"></i><b>9.1</b> Data Types</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="base-r.html"><a href="base-r.html#numeric-double"><i class="fa fa-check"></i><b>9.1.1</b> Numeric (Double)</a></li>
+<li class="chapter" data-level="9.1.2" data-path="base-r.html"><a href="base-r.html#integer"><i class="fa fa-check"></i><b>9.1.2</b> Integer</a></li>
+<li class="chapter" data-level="9.1.3" data-path="base-r.html"><a href="base-r.html#logical"><i class="fa fa-check"></i><b>9.1.3</b> Logical</a></li>
+<li class="chapter" data-level="9.1.4" data-path="base-r.html"><a href="base-r.html#character"><i class="fa fa-check"></i><b>9.1.4</b> Character</a></li>
+<li class="chapter" data-level="9.1.5" data-path="base-r.html"><a href="base-r.html#factor"><i class="fa fa-check"></i><b>9.1.5</b> Factor</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="20" data-path="default-shiny-example.html"><a href="default-shiny-example.html"><i class="fa fa-check"></i><b>20</b> Default Shiny Example</a></li>
+<li class="chapter" data-level="10" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>10</b> Data Structures</a><ul>
+<li class="chapter" data-level="10.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>10.1</b> Vectors</a></li>
+<li class="chapter" data-level="10.2" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>10.2</b> Matrices</a></li>
+<li class="chapter" data-level="10.3" data-path="data-structures.html"><a href="data-structures.html#arrays"><i class="fa fa-check"></i><b>10.3</b> Arrays</a></li>
+<li class="chapter" data-level="10.4" data-path="data-structures.html"><a href="data-structures.html#data-frames"><i class="fa fa-check"></i><b>10.4</b> Data Frames</a></li>
+<li class="chapter" data-level="10.5" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>10.5</b> Lists</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html"><i class="fa fa-check"></i><b>11</b> Data Structure Manipulation</a><ul>
+<li class="chapter" data-level="11.1" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#assignment-opperator--"><i class="fa fa-check"></i><b>11.1</b> Assignment Opperator (<code>&lt;-</code>)</a></li>
+<li class="chapter" data-level="11.2" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#manipulting-vectors"><i class="fa fa-check"></i><b>11.2</b> Manipulting Vectors</a></li>
+<li class="chapter" data-level="11.3" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#manipulating-data-frames"><i class="fa fa-check"></i><b>11.3</b> Manipulating Data Frames</a></li>
+<li class="chapter" data-level="11.4" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#importing-data"><i class="fa fa-check"></i><b>11.4</b> Importing Data</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#file_path"><i class="fa fa-check"></i><b>11.4.1</b> file_path</a></li>
+<li class="chapter" data-level="11.4.2" data-path="data-structure-manipulation.html"><a href="data-structure-manipulation.html#read.csv"><i class="fa fa-check"></i><b>11.4.2</b> read.csv</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i><b>12</b> Style Guide</a><ul>
+<li class="chapter" data-level="12.1" data-path="style-guide.html"><a href="style-guide.html#names"><i class="fa fa-check"></i><b>12.1</b> Names</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="style-guide.html"><a href="style-guide.html#object-names-discriptive-suffix"><i class="fa fa-check"></i><b>12.1.1</b> Object Names: Discriptive Suffix</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="style-guide.html"><a href="style-guide.html#spacing-and-indenting"><i class="fa fa-check"></i><b>12.2</b> Spacing and Indenting</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>13</b> Writing Functions</a></li>
+<li class="chapter" data-level="14" data-path="loops.html"><a href="loops.html"><i class="fa fa-check"></i><b>14</b> Loops</a><ul>
+<li class="chapter" data-level="14.1" data-path="loops.html"><a href="loops.html#for-loop"><i class="fa fa-check"></i><b>14.1</b> for loop</a></li>
+<li class="chapter" data-level="14.2" data-path="loops.html"><a href="loops.html#apply-family"><i class="fa fa-check"></i><b>14.2</b> apply family</a><ul>
+<li class="chapter" data-level="14.2.1" data-path="loops.html"><a href="loops.html#apply"><i class="fa fa-check"></i><b>14.2.1</b> apply</a></li>
+<li class="chapter" data-level="14.2.2" data-path="loops.html"><a href="loops.html#lapply"><i class="fa fa-check"></i><b>14.2.2</b> lapply</a></li>
+<li class="chapter" data-level="14.2.3" data-path="loops.html"><a href="loops.html#sapply"><i class="fa fa-check"></i><b>14.2.3</b> sapply</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="tidyverse.html"><a href="tidyverse.html"><i class="fa fa-check"></i><b>15</b> Tidyverse</a><ul>
+<li class="chapter" data-level="15.1" data-path="tidyverse.html"><a href="tidyverse.html#tidyverse-directory"><i class="fa fa-check"></i><b>15.1</b> Tidyverse Directory</a></li>
+<li class="chapter" data-level="15.2" data-path="tidyverse.html"><a href="tidyverse.html#magrittr"><i class="fa fa-check"></i><b>15.2</b> magrittr</a><ul>
+<li class="chapter" data-level="15.2.1" data-path="tidyverse.html"><a href="tidyverse.html#example-data"><i class="fa fa-check"></i><b>15.2.1</b> Example Data</a></li>
+<li class="chapter" data-level="15.2.2" data-path="tidyverse.html"><a href="tidyverse.html#pipe-operator"><i class="fa fa-check"></i><b>15.2.2</b> Pipe Operator (%&gt;%)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="dplyr.html"><a href="dplyr.html"><i class="fa fa-check"></i><b>16</b> dplyr</a><ul>
+<li class="chapter" data-level="16.0.1" data-path="dplyr.html"><a href="dplyr.html#example-data-1"><i class="fa fa-check"></i><b>16.0.1</b> Example Data</a></li>
+<li class="chapter" data-level="16.0.2" data-path="dplyr.html"><a href="dplyr.html#rename"><i class="fa fa-check"></i><b>16.0.2</b> Rename</a></li>
+<li class="chapter" data-level="16.0.3" data-path="dplyr.html"><a href="dplyr.html#filter"><i class="fa fa-check"></i><b>16.0.3</b> Filter</a></li>
+<li class="chapter" data-level="16.0.4" data-path="dplyr.html"><a href="dplyr.html#select"><i class="fa fa-check"></i><b>16.0.4</b> Select</a></li>
+<li class="chapter" data-level="16.0.5" data-path="dplyr.html"><a href="dplyr.html#distinct"><i class="fa fa-check"></i><b>16.0.5</b> distinct</a></li>
+<li class="chapter" data-level="16.0.6" data-path="dplyr.html"><a href="dplyr.html#mutate"><i class="fa fa-check"></i><b>16.0.6</b> mutate</a></li>
+<li class="chapter" data-level="16.0.7" data-path="dplyr.html"><a href="dplyr.html#group_by"><i class="fa fa-check"></i><b>16.0.7</b> group_by</a></li>
+<li class="chapter" data-level="16.0.8" data-path="dplyr.html"><a href="dplyr.html#summarize"><i class="fa fa-check"></i><b>16.0.8</b> summarize</a></li>
+<li class="chapter" data-level="16.0.9" data-path="dplyr.html"><a href="dplyr.html#joins"><i class="fa fa-check"></i><b>16.0.9</b> Joins</a></li>
+<li class="chapter" data-level="16.0.10" data-path="dplyr.html"><a href="dplyr.html#bind"><i class="fa fa-check"></i><b>16.0.10</b> Bind</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="tidyr.html"><a href="tidyr.html"><i class="fa fa-check"></i><b>17</b> tidyr</a><ul>
+<li class="chapter" data-level="17.0.1" data-path="tidyr.html"><a href="tidyr.html#example-data-2"><i class="fa fa-check"></i><b>17.0.1</b> Example Data</a></li>
+<li class="chapter" data-level="17.0.2" data-path="tidyr.html"><a href="tidyr.html#spread"><i class="fa fa-check"></i><b>17.0.2</b> spread</a></li>
+<li class="chapter" data-level="17.0.3" data-path="tidyr.html"><a href="tidyr.html#gather"><i class="fa fa-check"></i><b>17.0.3</b> gather</a></li>
+<li class="chapter" data-level="17.0.4" data-path="tidyr.html"><a href="tidyr.html#complete"><i class="fa fa-check"></i><b>17.0.4</b> complete</a></li>
+<li class="chapter" data-level="17.0.5" data-path="tidyr.html"><a href="tidyr.html#separate"><i class="fa fa-check"></i><b>17.0.5</b> separate</a></li>
+<li class="chapter" data-level="17.0.6" data-path="tidyr.html"><a href="tidyr.html#unite"><i class="fa fa-check"></i><b>17.0.6</b> unite</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="lubridate.html"><a href="lubridate.html"><i class="fa fa-check"></i><b>18</b> lubridate</a><ul>
+<li class="chapter" data-level="18.0.1" data-path="lubridate.html"><a href="lubridate.html#example-data-3"><i class="fa fa-check"></i><b>18.0.1</b> Example Data</a></li>
+<li class="chapter" data-level="18.0.2" data-path="lubridate.html"><a href="lubridate.html#mdy-ymd-dmy-ymd_hms"><i class="fa fa-check"></i><b>18.0.2</b> mdy, ymd, dmy, ymd_hms, …</a></li>
+<li class="chapter" data-level="18.0.3" data-path="lubridate.html"><a href="lubridate.html#year-month-mday-yday-hour-minute-and-second"><i class="fa fa-check"></i><b>18.0.3</b> year, month, mday, yday, hour, minute, and second</a></li>
+<li class="chapter" data-level="18.0.4" data-path="lubridate.html"><a href="lubridate.html#round_date-floor_date-and-ceiling_date"><i class="fa fa-check"></i><b>18.0.4</b> round_date, floor_date, and ceiling_date</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>19</b> ggplot2</a><ul>
+<li class="chapter" data-level="19.0.1" data-path="ggplot2.html"><a href="ggplot2.html#example-data-4"><i class="fa fa-check"></i><b>19.0.1</b> Example Data</a></li>
+<li class="chapter" data-level="19.0.2" data-path="ggplot2.html"><a href="ggplot2.html#ggplot"><i class="fa fa-check"></i><b>19.0.2</b> ggplot</a></li>
+<li class="chapter" data-level="19.0.3" data-path="ggplot2.html"><a href="ggplot2.html#aes"><i class="fa fa-check"></i><b>19.0.3</b> aes</a></li>
+<li class="chapter" data-level="19.0.4" data-path="ggplot2.html"><a href="ggplot2.html#geom_boxplot"><i class="fa fa-check"></i><b>19.0.4</b> geom_boxplot</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>20</b> Shiny</a><ul>
+<li class="chapter" data-level="20.1" data-path="shiny.html"><a href="shiny.html#what-is-shiny"><i class="fa fa-check"></i><b>20.1</b> What is Shiny?</a></li>
+<li class="chapter" data-level="20.2" data-path="shiny.html"><a href="shiny.html#resources"><i class="fa fa-check"></i><b>20.2</b> Resources</a></li>
+<li class="chapter" data-level="20.3" data-path="shiny.html"><a href="shiny.html#project-composition"><i class="fa fa-check"></i><b>20.3</b> Project Composition</a><ul>
+<li class="chapter" data-level="20.3.1" data-path="shiny.html"><a href="shiny.html#ui.r"><i class="fa fa-check"></i><b>20.3.1</b> ui.R</a></li>
+<li class="chapter" data-level="20.3.2" data-path="shiny.html"><a href="shiny.html#server.r"><i class="fa fa-check"></i><b>20.3.2</b> server.R</a></li>
+<li class="chapter" data-level="20.3.3" data-path="shiny.html"><a href="shiny.html#global.r"><i class="fa fa-check"></i><b>20.3.3</b> global.R</a></li>
+<li class="chapter" data-level="20.3.4" data-path="shiny.html"><a href="shiny.html#structure"><i class="fa fa-check"></i><b>20.3.4</b> Structure</a></li>
+<li class="chapter" data-level="20.3.5" data-path="shiny.html"><a href="shiny.html#r-packages-2"><i class="fa fa-check"></i><b>20.3.5</b> R-Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="20.4" data-path="shiny.html"><a href="shiny.html#helpful-r-packages"><i class="fa fa-check"></i><b>20.4</b> Helpful R-Packages</a><ul>
+<li class="chapter" data-level="20.4.1" data-path="shiny.html"><a href="shiny.html#dt-interactive-tables"><i class="fa fa-check"></i><b>20.4.1</b> DT (Interactive Tables)</a></li>
+<li class="chapter" data-level="20.4.2" data-path="shiny.html"><a href="shiny.html#dygraphs-interactive-time-series-plots"><i class="fa fa-check"></i><b>20.4.2</b> dygraphs (Interactive Time Series Plots)</a></li>
+<li class="chapter" data-level="20.4.3" data-path="shiny.html"><a href="shiny.html#leaflet-interactive-maps"><i class="fa fa-check"></i><b>20.4.3</b> leaflet (Interactive Maps)</a></li>
+<li class="chapter" data-level="20.4.4" data-path="shiny.html"><a href="shiny.html#plotly-interactive-figures"><i class="fa fa-check"></i><b>20.4.4</b> plotly (Interactive Figures)</a></li>
+</ul></li>
+<li class="chapter" data-level="20.5" data-path="shiny.html"><a href="shiny.html#publishing"><i class="fa fa-check"></i><b>20.5</b> Publishing</a><ul>
+<li class="chapter" data-level="20.5.1" data-path="shiny.html"><a href="shiny.html#how-to-publish-to-shinyapps.io"><i class="fa fa-check"></i><b>20.5.1</b> How to Publish to shinyapps.io</a></li>
+</ul></li>
+<li class="chapter" data-level="20.6" data-path="shiny.html"><a href="shiny.html#data-management"><i class="fa fa-check"></i><b>20.6</b> Data Management</a><ul>
+<li class="chapter" data-level="20.6.1" data-path="shiny.html"><a href="shiny.html#small-data-sets"><i class="fa fa-check"></i><b>20.6.1</b> Small Data Sets</a></li>
+<li class="chapter" data-level="20.6.2" data-path="shiny.html"><a href="shiny.html#large-data-sets"><i class="fa fa-check"></i><b>20.6.2</b> Large Data Sets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="default-shiny-example.html"><a href="default-shiny-example.html"><i class="fa fa-check"></i><b>21</b> Default Shiny Example</a></li>
 </ul>
 
       </nav>
@@ -322,7 +323,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="lubridate" class="section level1">
-<h1><span class="header-section-number">17</span> lubridate</h1>
+<h1><span class="header-section-number">18</span> lubridate</h1>
 <center>
 <img src="images/hex_symbols/lubridate.png" width="200" />
 </center>
@@ -342,7 +343,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="kw">library</span>(dplyr) 
 )</code></pre>
 <div id="example-data-3" class="section level3">
-<h3><span class="header-section-number">17.0.1</span> Example Data</h3>
+<h3><span class="header-section-number">18.0.1</span> Example Data</h3>
 <p>Import the example data. This data represents benthic macroinvertebrate data collected in the littoral zone of Onondaga, Otisco, and Cazenovia lakes.</p>
 <pre class="sourceCode r"><code class="sourceCode r">taxa.df &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="st">&quot;data&quot;</span>,
           <span class="st">&quot;zms_thesis-macro_2017-06-18.csv&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
@@ -353,11 +354,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span class="st">  </span><span class="kw">distinct</span>()
 
 DT<span class="op">::</span><span class="kw">datatable</span>(dates.df, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">columnDefs =</span> <span class="kw">list</span>(<span class="kw">list</span>(<span class="dt">className =</span> <span class="st">&#39;dt-center&#39;</span>, <span class="dt">targets =</span> <span class="dv">0</span><span class="op">:</span><span class="dv">2</span>))))</code></pre>
-<div id="htmlwidget-818c25349c5822e426a6" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-818c25349c5822e426a6">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48"],["onon_1","onon_2","onon_3","onon_4","onon_5","onon_6","onon_7","onon_8","onon_9","onon_10","onon_11","onon_12","onon_13","onon_14","onon_15","onon_16","caz_1","caz_2","caz_3","caz_4","caz_5","caz_6","caz_7","caz_8","caz_9","caz_10","caz_11","caz_12","caz_13","caz_14","caz_15","caz_16","ot_1","ot_2","ot_3","ot_4","ot_5","ot_6","ot_7","ot_8","ot_9","ot_10","ot_11","ot_12","ot_13","ot_14","ot_15","ot_16"],["6/22/2014","6/22/2014","6/22/2014","6/22/2014","6/23/2014","6/23/2014","6/24/2014","6/24/2014","6/24/2014","7/8/2014","6/27/2014","6/26/2014","6/26/2014","6/27/2014","6/26/2014","6/26/2014","7/1/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","7/1/2014","7/1/2014","7/1/2014","7/1/2014","7/1/2014","7/1/2014","7/2/2014","7/2/2014","7/2/2014","7/2/2014","7/3/2014","7/3/2014","7/3/2014","7/3/2014","7/3/2014","7/3/2014","7/3/2014","7/2/2014","7/2/2014","7/2/2014","7/2/2014","7/2/2014"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>station_id<\/th>\n      <th>date<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-center","targets":[0,1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-484c70ea31a9ab372040" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-484c70ea31a9ab372040">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48"],["onon_1","onon_2","onon_3","onon_4","onon_5","onon_6","onon_7","onon_8","onon_9","onon_10","onon_11","onon_12","onon_13","onon_14","onon_15","onon_16","caz_1","caz_2","caz_3","caz_4","caz_5","caz_6","caz_7","caz_8","caz_9","caz_10","caz_11","caz_12","caz_13","caz_14","caz_15","caz_16","ot_1","ot_2","ot_3","ot_4","ot_5","ot_6","ot_7","ot_8","ot_9","ot_10","ot_11","ot_12","ot_13","ot_14","ot_15","ot_16"],["6/22/2014","6/22/2014","6/22/2014","6/22/2014","6/23/2014","6/23/2014","6/24/2014","6/24/2014","6/24/2014","7/8/2014","6/27/2014","6/26/2014","6/26/2014","6/27/2014","6/26/2014","6/26/2014","7/1/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","6/30/2014","7/1/2014","7/1/2014","7/1/2014","7/1/2014","7/1/2014","7/1/2014","7/2/2014","7/2/2014","7/2/2014","7/2/2014","7/3/2014","7/3/2014","7/3/2014","7/3/2014","7/3/2014","7/3/2014","7/3/2014","7/2/2014","7/2/2014","7/2/2014","7/2/2014","7/2/2014"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>station_id<\/th>\n      <th>date<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-center","targets":[0,1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="mdy-ymd-dmy-ymd_hms" class="section level3">
-<h3><span class="header-section-number">17.0.2</span> mdy, ymd, dmy, ymd_hms, …</h3>
+<h3><span class="header-section-number">18.0.2</span> mdy, ymd, dmy, ymd_hms, …</h3>
 <ul>
 <li><strong>Definition:</strong> convert character or numeric data class to a date or datetime class. There are a lot of variations of this function that are specific to the format of your date or datetime.</li>
 <li><strong>Link:</strong> <a href="https://www.rdocumentation.org/packages/lubridate/versions/1.7.4/topics/ymd" class="uri">https://www.rdocumentation.org/packages/lubridate/versions/1.7.4/topics/ymd</a></li>
@@ -367,8 +368,8 @@ DT<span class="op">::</span><span class="kw">datatable</span>(dates.df, <span cl
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">date =</span> <span class="kw">mdy</span>(date))
 
 DT<span class="op">::</span><span class="kw">datatable</span>(mdy.df, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">columnDefs =</span> <span class="kw">list</span>(<span class="kw">list</span>(<span class="dt">className =</span> <span class="st">&#39;dt-center&#39;</span>, <span class="dt">targets =</span> <span class="dv">0</span><span class="op">:</span><span class="dv">2</span>))))</code></pre>
-<div id="htmlwidget-4cca3e7da60de65b4f48" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4cca3e7da60de65b4f48">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48"],["onon_1","onon_2","onon_3","onon_4","onon_5","onon_6","onon_7","onon_8","onon_9","onon_10","onon_11","onon_12","onon_13","onon_14","onon_15","onon_16","caz_1","caz_2","caz_3","caz_4","caz_5","caz_6","caz_7","caz_8","caz_9","caz_10","caz_11","caz_12","caz_13","caz_14","caz_15","caz_16","ot_1","ot_2","ot_3","ot_4","ot_5","ot_6","ot_7","ot_8","ot_9","ot_10","ot_11","ot_12","ot_13","ot_14","ot_15","ot_16"],["2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-23","2014-06-23","2014-06-24","2014-06-24","2014-06-24","2014-07-08","2014-06-27","2014-06-26","2014-06-26","2014-06-27","2014-06-26","2014-06-26","2014-07-01","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-02"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>station_id<\/th>\n      <th>date<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-center","targets":[0,1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-564a1bdc24c456e6e5bd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-564a1bdc24c456e6e5bd">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48"],["onon_1","onon_2","onon_3","onon_4","onon_5","onon_6","onon_7","onon_8","onon_9","onon_10","onon_11","onon_12","onon_13","onon_14","onon_15","onon_16","caz_1","caz_2","caz_3","caz_4","caz_5","caz_6","caz_7","caz_8","caz_9","caz_10","caz_11","caz_12","caz_13","caz_14","caz_15","caz_16","ot_1","ot_2","ot_3","ot_4","ot_5","ot_6","ot_7","ot_8","ot_9","ot_10","ot_11","ot_12","ot_13","ot_14","ot_15","ot_16"],["2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-23","2014-06-23","2014-06-24","2014-06-24","2014-06-24","2014-07-08","2014-06-27","2014-06-26","2014-06-26","2014-06-27","2014-06-26","2014-06-26","2014-07-01","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-02"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>station_id<\/th>\n      <th>date<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-center","targets":[0,1,2]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p>In the example above, it is obvious the the format of the date has changed but it is not obvious that the R-class has changed. First look at the classes represented in the <code>dates.df</code>.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(dates.df, class)</code></pre>
 <pre><code>##  station_id        date 
@@ -379,7 +380,7 @@ DT<span class="op">::</span><span class="kw">datatable</span>(mdy.df, <span clas
 ## &quot;character&quot;      &quot;Date&quot;</code></pre>
 </div>
 <div id="year-month-mday-yday-hour-minute-and-second" class="section level3">
-<h3><span class="header-section-number">17.0.3</span> year, month, mday, yday, hour, minute, and second</h3>
+<h3><span class="header-section-number">18.0.3</span> year, month, mday, yday, hour, minute, and second</h3>
 <ul>
 <li><strong>Definition:</strong> these functions allow you to extract a specific feature of a date or datetime class. The returned values will no longer be a date or datetime class.</li>
 <li><strong>Links:</strong>
@@ -439,11 +440,11 @@ DT<span class="op">::</span><span class="kw">datatable</span>(mdy.df, <span clas
          <span class="dt">second =</span> <span class="kw">second</span>(date))
 
 DT<span class="op">::</span><span class="kw">datatable</span>(extract.df, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">scrollX =</span> <span class="ot">TRUE</span>))</code></pre>
-<div id="htmlwidget-4dda5c1e62c05fd058c4" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4dda5c1e62c05fd058c4">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48"],["onon_1","onon_2","onon_3","onon_4","onon_5","onon_6","onon_7","onon_8","onon_9","onon_10","onon_11","onon_12","onon_13","onon_14","onon_15","onon_16","caz_1","caz_2","caz_3","caz_4","caz_5","caz_6","caz_7","caz_8","caz_9","caz_10","caz_11","caz_12","caz_13","caz_14","caz_15","caz_16","ot_1","ot_2","ot_3","ot_4","ot_5","ot_6","ot_7","ot_8","ot_9","ot_10","ot_11","ot_12","ot_13","ot_14","ot_15","ot_16"],["2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-23","2014-06-23","2014-06-24","2014-06-24","2014-06-24","2014-07-08","2014-06-27","2014-06-26","2014-06-26","2014-06-27","2014-06-26","2014-06-26","2014-07-01","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-02"],[2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014],[6,6,6,6,6,6,6,6,6,7,6,6,6,6,6,6,7,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],["Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jul","Jun","Jun","Jun","Jun","Jun","Jun","Jul","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul"],["June","June","June","June","June","June","June","June","June","July","June","June","June","June","June","June","July","June","June","June","June","June","June","June","June","June","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July"],[25,25,25,25,25,25,25,25,25,27,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27],[22,22,22,22,23,23,24,24,24,8,27,26,26,27,26,26,1,30,30,30,30,30,30,30,30,30,1,1,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3,2,2,2,2,2],[1,1,1,1,2,2,3,3,3,3,6,5,5,6,5,5,3,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,5,5,5,5,5,5,5,4,4,4,4,4],["Sun","Sun","Sun","Sun","Mon","Mon","Tue","Tue","Tue","Tue","Fri","Thu","Thu","Fri","Thu","Thu","Tue","Mon","Mon","Mon","Mon","Mon","Mon","Mon","Mon","Mon","Tue","Tue","Tue","Tue","Tue","Tue","Wed","Wed","Wed","Wed","Thu","Thu","Thu","Thu","Thu","Thu","Thu","Wed","Wed","Wed","Wed","Wed"],["Sunday","Sunday","Sunday","Sunday","Monday","Monday","Tuesday","Tuesday","Tuesday","Tuesday","Friday","Thursday","Thursday","Friday","Thursday","Thursday","Tuesday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Wednesday","Wednesday","Wednesday","Wednesday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday"],[22,22,22,22,23,23,24,24,24,8,27,26,26,27,26,26,1,30,30,30,30,30,30,30,30,30,1,1,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3,2,2,2,2,2],[83,83,83,83,84,84,85,85,85,8,88,87,87,88,87,87,1,91,91,91,91,91,91,91,91,91,1,1,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3,2,2,2,2,2],[173,173,173,173,174,174,175,175,175,189,178,177,177,178,177,177,182,181,181,181,181,181,181,181,181,181,182,182,182,182,182,182,183,183,183,183,184,184,184,184,184,184,184,183,183,183,183,183],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>station_id<\/th>\n      <th>date<\/th>\n      <th>year<\/th>\n      <th>month_int<\/th>\n      <th>month_abv<\/th>\n      <th>month_full<\/th>\n      <th>week<\/th>\n      <th>day<\/th>\n      <th>wday_int<\/th>\n      <th>wday_abv<\/th>\n      <th>wday_full<\/th>\n      <th>mday<\/th>\n      <th>qday<\/th>\n      <th>yday<\/th>\n      <th>hour<\/th>\n      <th>minute<\/th>\n      <th>second<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[3,4,7,8,9,12,13,14,15,16,17]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1cb06e45a84318387190" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1cb06e45a84318387190">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48"],["onon_1","onon_2","onon_3","onon_4","onon_5","onon_6","onon_7","onon_8","onon_9","onon_10","onon_11","onon_12","onon_13","onon_14","onon_15","onon_16","caz_1","caz_2","caz_3","caz_4","caz_5","caz_6","caz_7","caz_8","caz_9","caz_10","caz_11","caz_12","caz_13","caz_14","caz_15","caz_16","ot_1","ot_2","ot_3","ot_4","ot_5","ot_6","ot_7","ot_8","ot_9","ot_10","ot_11","ot_12","ot_13","ot_14","ot_15","ot_16"],["2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-23","2014-06-23","2014-06-24","2014-06-24","2014-06-24","2014-07-08","2014-06-27","2014-06-26","2014-06-26","2014-06-27","2014-06-26","2014-06-26","2014-07-01","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-02"],[2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014,2014],[6,6,6,6,6,6,6,6,6,7,6,6,6,6,6,6,7,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],["Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jul","Jun","Jun","Jun","Jun","Jun","Jun","Jul","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jun","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul","Jul"],["June","June","June","June","June","June","June","June","June","July","June","June","June","June","June","June","July","June","June","June","June","June","June","June","June","June","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July"],[25,25,25,25,25,25,25,25,25,27,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,26,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27],[22,22,22,22,23,23,24,24,24,8,27,26,26,27,26,26,1,30,30,30,30,30,30,30,30,30,1,1,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3,2,2,2,2,2],[1,1,1,1,2,2,3,3,3,3,6,5,5,6,5,5,3,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,5,5,5,5,5,5,5,4,4,4,4,4],["Sun","Sun","Sun","Sun","Mon","Mon","Tue","Tue","Tue","Tue","Fri","Thu","Thu","Fri","Thu","Thu","Tue","Mon","Mon","Mon","Mon","Mon","Mon","Mon","Mon","Mon","Tue","Tue","Tue","Tue","Tue","Tue","Wed","Wed","Wed","Wed","Thu","Thu","Thu","Thu","Thu","Thu","Thu","Wed","Wed","Wed","Wed","Wed"],["Sunday","Sunday","Sunday","Sunday","Monday","Monday","Tuesday","Tuesday","Tuesday","Tuesday","Friday","Thursday","Thursday","Friday","Thursday","Thursday","Tuesday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Monday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Wednesday","Wednesday","Wednesday","Wednesday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Thursday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday"],[22,22,22,22,23,23,24,24,24,8,27,26,26,27,26,26,1,30,30,30,30,30,30,30,30,30,1,1,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3,2,2,2,2,2],[83,83,83,83,84,84,85,85,85,8,88,87,87,88,87,87,1,91,91,91,91,91,91,91,91,91,1,1,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3,2,2,2,2,2],[173,173,173,173,174,174,175,175,175,189,178,177,177,178,177,177,182,181,181,181,181,181,181,181,181,181,182,182,182,182,182,182,183,183,183,183,184,184,184,184,184,184,184,183,183,183,183,183],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>station_id<\/th>\n      <th>date<\/th>\n      <th>year<\/th>\n      <th>month_int<\/th>\n      <th>month_abv<\/th>\n      <th>month_full<\/th>\n      <th>week<\/th>\n      <th>day<\/th>\n      <th>wday_int<\/th>\n      <th>wday_abv<\/th>\n      <th>wday_full<\/th>\n      <th>mday<\/th>\n      <th>qday<\/th>\n      <th>yday<\/th>\n      <th>hour<\/th>\n      <th>minute<\/th>\n      <th>second<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[3,4,7,8,9,12,13,14,15,16,17]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="round_date-floor_date-and-ceiling_date" class="section level3">
-<h3><span class="header-section-number">17.0.4</span> round_date, floor_date, and ceiling_date</h3>
+<h3><span class="header-section-number">18.0.4</span> round_date, floor_date, and ceiling_date</h3>
 <ul>
 <li><strong>Definition:</strong> round a date or datetime value by a specified unit of time.</li>
 <li><strong>Links:</strong> <a href="https://lubridate.tidyverse.org/reference/round_date.html" class="uri">https://lubridate.tidyverse.org/reference/round_date.html</a></li>
@@ -463,8 +464,8 @@ DT<span class="op">::</span><span class="kw">datatable</span>(extract.df, <span 
 DT<span class="op">::</span><span class="kw">datatable</span>(round.df, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">scrollX =</span> <span class="ot">TRUE</span>,
                                        <span class="dt">autoWidth =</span> <span class="ot">TRUE</span>,
                                        <span class="dt">columnDefs =</span> <span class="kw">list</span>(<span class="kw">list</span>(<span class="dt">width =</span> <span class="st">&#39;70px&#39;</span>, <span class="dt">targets =</span> <span class="kw">c</span>(<span class="dv">2</span>)))))</code></pre>
-<div id="htmlwidget-8bb47cf5c44e6e1d08bc" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8bb47cf5c44e6e1d08bc">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48"],["onon_1","onon_2","onon_3","onon_4","onon_5","onon_6","onon_7","onon_8","onon_9","onon_10","onon_11","onon_12","onon_13","onon_14","onon_15","onon_16","caz_1","caz_2","caz_3","caz_4","caz_5","caz_6","caz_7","caz_8","caz_9","caz_10","caz_11","caz_12","caz_13","caz_14","caz_15","caz_16","ot_1","ot_2","ot_3","ot_4","ot_5","ot_6","ot_7","ot_8","ot_9","ot_10","ot_11","ot_12","ot_13","ot_14","ot_15","ot_16"],["2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-23","2014-06-23","2014-06-24","2014-06-24","2014-06-24","2014-07-08","2014-06-27","2014-06-26","2014-06-26","2014-06-27","2014-06-26","2014-06-26","2014-07-01","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-02"],["2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-07-06","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-07-06","2014-07-06","2014-07-06","2014-07-06","2014-07-06","2014-07-06","2014-07-06","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29"],["2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01"],["2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2015-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01"],["2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01"],["2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01"],["2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-07-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-07-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01"],["2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01"],["2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-08-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-08-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01"],["2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>station_id<\/th>\n      <th>date<\/th>\n      <th>round_week<\/th>\n      <th>round_month<\/th>\n      <th>round_year<\/th>\n      <th>round_year5<\/th>\n      <th>round_century<\/th>\n      <th>floor_month<\/th>\n      <th>floor_year<\/th>\n      <th>ceiling_month<\/th>\n      <th>ceiling_year<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"autoWidth":true,"columnDefs":[{"width":"70px","targets":2},{"orderable":false,"targets":0}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3c65731867370b34b199" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3c65731867370b34b199">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48"],["onon_1","onon_2","onon_3","onon_4","onon_5","onon_6","onon_7","onon_8","onon_9","onon_10","onon_11","onon_12","onon_13","onon_14","onon_15","onon_16","caz_1","caz_2","caz_3","caz_4","caz_5","caz_6","caz_7","caz_8","caz_9","caz_10","caz_11","caz_12","caz_13","caz_14","caz_15","caz_16","ot_1","ot_2","ot_3","ot_4","ot_5","ot_6","ot_7","ot_8","ot_9","ot_10","ot_11","ot_12","ot_13","ot_14","ot_15","ot_16"],["2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-23","2014-06-23","2014-06-24","2014-06-24","2014-06-24","2014-07-08","2014-06-27","2014-06-26","2014-06-26","2014-06-27","2014-06-26","2014-06-26","2014-07-01","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-06-30","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-03","2014-07-02","2014-07-02","2014-07-02","2014-07-02","2014-07-02"],["2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-06-22","2014-07-06","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-07-06","2014-07-06","2014-07-06","2014-07-06","2014-07-06","2014-07-06","2014-07-06","2014-06-29","2014-06-29","2014-06-29","2014-06-29","2014-06-29"],["2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01"],["2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2015-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01"],["2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01"],["2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01","2000-01-01"],["2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-07-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-07-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-06-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01"],["2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01","2014-01-01"],["2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-08-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-08-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-07-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01","2014-08-01"],["2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01","2015-01-01"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>station_id<\/th>\n      <th>date<\/th>\n      <th>round_week<\/th>\n      <th>round_month<\/th>\n      <th>round_year<\/th>\n      <th>round_year5<\/th>\n      <th>round_century<\/th>\n      <th>floor_month<\/th>\n      <th>floor_year<\/th>\n      <th>ceiling_month<\/th>\n      <th>ceiling_year<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"autoWidth":true,"columnDefs":[{"width":"70px","targets":2},{"orderable":false,"targets":0}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 </div>
 </div>
