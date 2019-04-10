@@ -331,6 +331,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>WARNING:</strong> These packages are very helpful but many are not yet stable. There is potential that a function could undergo a large change or be depreciated in the future. This can have a significant negative impact on the reproducibility of your work. The functions in <strong>tidyverse</strong> packages will generally provide helpful messages indicating if a function has been depreciated and indicate the function that has taken its place.</p>
 <p>Instead of loading each <strong>tidyverse</strong> package individually, <code>library(tidyverse)</code> will load the most frequently used packages: <strong>ggplot2</strong>, <strong>purrr</strong>, <strong>tibble</strong>, <strong>dplyr</strong>, <strong>tidyr</strong>, <strong>stringr</strong>, <strong>readr</strong>, and <strong>forcats</strong>.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.2.1 --</code></pre>
+<pre><code>## v ggplot2 3.1.1       v purrr   0.3.2  
+## v tibble  2.1.1       v dplyr   0.8.0.1
+## v tidyr   0.8.3       v stringr 1.4.0  
+## v readr   1.3.1       v forcats 0.4.0</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Warning: package &#39;tibble&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Warning: package &#39;tidyr&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Warning: package &#39;purrr&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
 <div id="tidyverse-directory" class="section level2">
 <h2><span class="header-section-number">14.1</span> Tidyverse Directory</h2>
 <p><img src="images/hex_symbols/tidyverse_circle.png" align="right" width="450" /></p>
@@ -392,6 +404,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>Index of Functions:</strong> <a href="https://magrittr.tidyverse.org/reference/index.html" class="uri">https://magrittr.tidyverse.org/reference/index.html</a></li>
 </ul>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(magrittr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;magrittr&#39;</code></pre>
+<pre><code>## The following object is masked _by_ &#39;.GlobalEnv&#39;:
+## 
+##     subtract</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     set_names</code></pre>
+<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     extract</code></pre>
 <div id="example-data" class="section level3">
 <h3><span class="header-section-number">14.2.1</span> Example Data</h3>
 <p>This vector will be used as an example for this section. Notice that all of the strings are slightly different. I frequently find issues like this in data sets I have been given. We will assume that all of the strings are intended to represent the same information, and therefore require some processing to standardize the strings.</p>

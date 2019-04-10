@@ -409,9 +409,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span class="co">#    http://shiny.rstudio.com/</span>
 <span class="co">#</span>
 
-<span class="kw">library</span>(shiny)
-
-<span class="co"># Define UI for application that draws a histogram</span>
+<span class="kw">library</span>(shiny)</code></pre>
+<pre><code>## Warning: package &#39;shiny&#39; was built under R version 3.5.3</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Define UI for application that draws a histogram</span>
 ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(
    
    <span class="co"># Application title</span>
@@ -449,6 +449,7 @@ server &lt;-<span class="st"> </span><span class="cf">function</span>(input, out
 
 <span class="co"># Run the application </span>
 <span class="kw">shinyApp</span>(<span class="dt">ui =</span> ui, <span class="dt">server =</span> server)</code></pre>
+<pre><code>## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.</code></pre>
 <div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
 
 </div>

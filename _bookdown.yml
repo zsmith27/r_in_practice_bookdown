@@ -1,8 +1,2 @@
-name: "my-website"
-navbar:
-  title: "My Website"
-  left:
-    - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
+book_filename: "r_in_practice.Rmd"
+output_dir: "book-output"
